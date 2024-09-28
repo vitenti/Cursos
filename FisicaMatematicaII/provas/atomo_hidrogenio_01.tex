@@ -1,0 +1,51 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- Átomo de Hidrogênio}
+
+\begin{document}
+\begin{enumerate}
+      \item Átomo de Hidrogênio. Conceitos a Hamiltoniana representando a interação
+            eletrostática entre o elétron e o próton. A equação de autovalores de
+            energia e autoestados de energia é dada por:
+            \begin{equation}
+                  \left[ -\frac{\hbar^2}{2m} \nabla^2 - \frac{e^2}{4\pi\epsilon_0r} \right]
+                  \psi_\alpha = E_\alpha \psi_\alpha,
+            \end{equation}
+            onde $m$ é a massa do elétron, $e$ é a carga do elétron, $r$ é a distância
+            entre o elétron e o próton, $\psi$ é a função de onda do elétron e $E$ é a
+            energia do elétron. Usando coordenadas esféricas, aplique o método de
+            separação de variáveis para resolver a equação de autovalores de energia e
+            autoestados de energia.
+            \begin{enumerate}
+                  \item Faça a separação de variáveis $\psi(r,\theta,\phi) =
+                              R(r)Y(\theta,\phi)$. Mostre que a parte angular
+                        $Y(\theta,\phi)$ pode ser escrita como harmônicos
+                        esféricos fazendo a separação em $\phi$ e em $\theta$.
+                        Discuta os rótulos $l$ e $m$ associados aos harmônicos
+                        esféricos. Explique e discuta quais são os possíveis
+                        valores.
+                  \item Usando a separação de variáveis, mostre que a parte radial
+                        $R(r)$ da função de onda do elétron satisfaz a equação
+                        diferencial radial:
+                        \begin{equation}
+                              \frac{1}{r^2} \frac{\dd}{\dd r} \left( r^2 \frac{\dd R}{\dd r} \right) +
+                              \left[ \frac{2m}{\hbar^2} \left( E - \frac{e^2}{4\pi\epsilon_0r} \right) -
+                                    \frac{l(l+1)}{r^2} \right] R = 0.
+                        \end{equation}
+                  \item Identifique as escalas físicas relevantes para a equação acima e
+                        reescreva a equação em termos adimensionais.
+                  \item Estude o limite assintótico em $r$ da equação radial. Discuta as
+                        soluções para $r \to 0$ e $r \to \infty$. Discuta a relação
+                        entre o limite assintótico e a condição de normalização da
+                        função de onda. Discuta também a relação do limite com o sinal
+                        da energia.
+                  \item Especialize a equação radial para o caso convergente. Encontre
+                        as soluções que satisfazem a condição de normalização. Aplique o
+                        método de Frobenius para encontrar a solução geral da equação
+                        radial. Mostre e discuta os valores da energia permitidos.
+            \end{enumerate}
+\end{enumerate}
+
+\end{document}

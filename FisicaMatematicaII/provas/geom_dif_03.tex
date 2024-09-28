@@ -1,0 +1,45 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- Geometria Diferencial}
+
+\begin{document}
+\begin{enumerate}
+	\item Dado um círculo unitário definido por $S^1=\left\{(x,y)\in \mathbb{R}^2;
+		      x^2+y^2=1\right\}$, mostre explicitamente que $S^1$ é uma variedade
+	      diferenciável. Para isso faça os itens abaixo:
+	      \begin{enumerate}
+		      \item Encontre um conjunto minimo de cartas $(U_i,\,\phi_i)$ para $0<i<m$
+		            (onde $m$ é o número de cartas) e mostre que ele cobre toda a variedade.
+		      \item Mostre que as funções $\phi_1\circ\phi_2^{-1}$ e
+		            $\phi_2\circ\phi_1^{-1}$ são suaves em $U_1 \cap U_2$.
+	      \end{enumerate}
+
+	\item Seja o mapa $h:\mathbb{R}^2\rightarrow\mathbb{R}^3$ dado por
+	      \begin{align}
+		      h(x,y) = \left(\begin{matrix}
+			                     u(x,y) \\
+			                     v(x,y) \\
+			                     w(x,y) \\
+		                     \end{matrix}\right)
+		      =\left(\begin{matrix}
+			             x       \\
+			             y       \\
+			             x^2+y^2 \\
+		             \end{matrix}\right)
+	      \end{align}
+	      E um campo vetorial $$V=x\frac{\partial}{\partial x}+y\frac{\partial}{\partial
+			      y},$$ calcule o campo em $\mathbb{R}^3$ definido pelo \emph{push-forward} $h_*
+		      V\in T_{h(x,y)}\mathbb{R}^3$ (lembre-se que $h_* V$ é uma derivação em
+	      $C^\infty\left(\mathbb{R}^3\right)$).
+	\item Calcule as curvas integrais do campo vetorial $V$ dado na questão anterior, ou
+	      seja, as curvas cuja tangente coincide com $V$ ao longo de suas trajetórias,
+	      $$\sigma_*\frac{\mathrm{d}}{\mathrm{d}t} = V_\sigma.$$.
+	\item Prove que a aplicação de duas derivações na mesma função não forma uma
+	      derivação. Em seguida, prove que o comutador de duas derivações, ou seja,
+	      $$[V,U](f)\equiv V(U(f))-U(V(f))$$ é uma derivação ($V,U$ são derivações e $f$ uma
+	      função da variedade).
+\end{enumerate}
+
+\end{document}

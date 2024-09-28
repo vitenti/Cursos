@@ -1,0 +1,39 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- EDO e EDP}
+
+\begin{document}
+\begin{enumerate}
+	\item Em quais situações é apropriado calcular soluções usando a série de Taylor e
+	      em quais casos é necessário recorrer ao método de Frobenius? Dê exemplos para
+	      ilustrar cada situação, incluindo casos em que o método de Frobenius não pode ser
+	      aplicado.
+
+	\item Considere a equação de Bessel:
+	      \[x^2y'' + xy' + (x^2 - \nu^2)y = 0.\]
+	      \begin{enumerate}
+		      \item Classifique o ponto \(x_0 = 0\) e encontre a primeira solução na
+		            forma de Frobenius.
+		      \item Explique o tipo da segunda solução nos casos em que:
+		            \begin{enumerate}
+			            \item \(\nu\) é um número inteiro.
+			            \item \(\nu\) é semi-inteiro.
+			            \item \(2\nu \notin \mathbb{Z}\).
+		            \end{enumerate}
+	      \end{enumerate}
+	\item Considere a equação de Legendre:
+	      \[(1-x^2)y'' - 2xy' + \lambda(\lambda+1)y = 0,\] onde \(y(x)\) está definida
+	      em \(x \in [-1,1]\). Resolva a equação em um dos pontos singulares regulares
+	      usando o método de Frobenius e encontre duas soluções linearmente
+	      independentes em torno desse ponto. Responda:
+	      \begin{enumerate}
+		      \item O que ocorre nos pontos singulares regulares se \(\lambda\) não for
+		            um número inteiro?
+		      \item Quais são as restrições sobre \(\lambda\) para garantir que as
+		            soluções sejam finitas para \(x \in [-1,1]\)?
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}

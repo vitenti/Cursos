@@ -1,0 +1,53 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- EDO E EDP}
+
+\begin{document}
+\begin{enumerate}
+
+	\item Considere a equação do oscilador harmônico:
+	      \[y'' + \omega^2 y = 0,\]
+	      onde \(\omega\) é uma constante real positiva.
+	      Mostre usando séries de potência que a solução geral da equação acima é dada por:
+	      \[y(x) = A \cos(\omega x) + B \sin(\omega x),\]
+	      onde \(A\) e \(B\) são constantes reais.
+
+	\item Para aplicar o método de Frobenius é necessário fazer primeiro a
+	      classificação dos pontos singulares da equação diferencial. Supondo que o
+	      dominio das equações diferenciais seja $\mathbb{R}$, classifique os pontos
+	      singulares, quando presentes, das equações diferenciais abaixo:
+	      \begin{enumerate}
+		      \item $x^2y'' + xy' + y = 0$.
+		      \item $x^2y'' + x^{3/2}y = 0$.
+		      \item $y'' + x y' + \frac{y}{e^x - 1 - x} = 0$.
+	      \end{enumerate}
+	\item Considere a equação de Bessel:
+	      \[x^2y'' + xy' + (x^2 - \nu^2)y = 0.\]
+	      \begin{enumerate}
+		      \item Classifique o ponto \(x_0 = 0\) e encontre a primeira solução na forma de Frobenius.
+		      \item Explique como encontrar a segunda solução linearmente independente, não
+		            é necessário resolver a equação.
+		            \begin{enumerate}
+			            \item \(\nu\) é um número inteiro.
+			            \item \(\nu\) é semi-inteiro.
+			            \item \(2\nu \notin \mathbb{Z}\).
+		            \end{enumerate}
+	      \end{enumerate}
+
+	\item Considere a equação de Legendre:
+	      \[(1-x^2)y'' - 2xy' + \lambda(\lambda+1)y = 0,\]
+	      onde \(y(x)\) está definida em \(x \in [-1,1]\). Para resolver a equação em $x_0=1$
+	      usando o método de Frobenius siga os passos abaixo:
+	      \begin{enumerate}
+		      \item Classifique o ponto $x_0 = 1$.
+		      \item Usando a série de Frobenius, encontre o polinômio indicial e suas raízes.
+		      \item Encontre a relação de recorrência para os coeficientes da série de Frobenius.
+		      \item Resolva a relação de recorrência para encontrar a primeira solução.
+		      \item Descreva como encontrar a segunda solução linearmente independente.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
