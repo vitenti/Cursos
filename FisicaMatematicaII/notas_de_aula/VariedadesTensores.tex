@@ -1,0 +1,134 @@
+\newif\ifuseseminar
+\useseminarfalse
+\input{../../latex_common/header.tex.frag}
+
+\title{Variedades e Tensores}
+
+\begin{document}
+\section{Variedades}
+\subsection{Definições}
+
+\section{Fibrado tangente}
+
+\subsection{Derivações como vetores tangentes}
+\label{sec:deriv}
+
+\section{Campos vetoriais}
+
+Na Sec.~\ref{sec:deriv} nos vimos que o conjunto das derivações em um ponto $p$
+da variedade $\VARM$ é isomórfico é isomórfico ao espaço dos vetores
+tangentes àquele mesmo ponto $\TpM$ . Vimos também que a
+união dos espaços tangentes
+$$\TM = \cup_{p\in\VARM}\TpM = \Set{(p,v) | p\in\VARM\;\text{and}\;v\in \TpM},$$
+forma o que chamamos de fibrado tangente. Como cada espaço tangente é isomórfico
+a cada espaço das derivações em um ponto, podemos usar intercambiavelmente $\DM$
+ou $\TM$. Daqui em diante, vamos denotar sempre o fibrado tangente por $\TM$
+lembrando que podemos usar tando o formalismo de derivações ou classes de
+equivalência para denotar um vetor.
+
+\definition{Chamamos de campo vetorial o mapa
+	\begin{equation}
+		v:\VARM\to \TpM,\quad v(p) = v_p.
+	\end{equation}
+	Essa é uma definição informal já que o lado direito não é um conjunto, mas um
+	conjunto para cada elemento do domínio. Uma definição rigorosa seria feita em
+	termos de seções transversais, contudo isso não será necessário por enquanto.
+	Aqui adotaremos $v_p$ como uma derivação em $p$, ou seja, $v_p:\CINFM\to\RR$. }
+
+Dada uma derivação $v_p$ em um ponto $p$, vimos que ela pode ser escrita em termos de uma base definida por uma carta $\phi$, ou seja,
+\begin{equation}
+	v_p(f) = \left[v_p(x^\mu)\left(\frac{\partial}{\partial x^\mu}\right)\right]_pf = \left.v_p(x^\mu)\left(\frac{\partial f \circ\phi^{-1}(\vec{x})}{\partial u^\mu}\right)\right\vert_{\vec{x}=\phi(p)}.
+\end{equation}
+Para simplificarmos nossa notação, vamos calcular nosso campo vetorial $v(p)$ em uma carta específica $\phi$, nesse caso
+\begin{equation}
+	\begin{split}
+		v_{\vec{x}}(f) & \equiv v_{\phi^{-1}(\vec{x})}(f),                                                                                                        \\
+		               & =v_{\vec{x}}(x^\mu)\frac{\partial f \circ\phi^{-1}(\vec{x})}{\partial u^\mu} = v^\mu(\vec{x})\frac{\partial F(\vec{x})}{\partial x^\mu}, \\
+		F(\vec{x})     & \equiv f \circ\phi^{-1}(\vec{x}),\quad v^\mu(\vec{x}) \equiv v_{\vec{x}}(x^\mu).
+	\end{split}
+\end{equation}
+Na expressão acima, nós definimos o representante local da função da variedade
+$f$ como $F$. Quando não há ambiguidade em relação a carta que usamos (quando estamos usando somente uma carta), a derivada parcial pode ainda ser escrita como
+\begin{equation}
+	\partial_\mu  \equiv \frac{\partial }{\partial x^\mu}.
+\end{equation}
+Ou seja, quando representado em uma carta podemos escrever um campo vetorial da
+forma
+\begin{equation}
+	v = v^\mu(\vec{x})\partial_\mu = v^\mu\partial_\mu.
+\end{equation}
+Na última igualdade, supondo que não há ambiguidade em relação ao ponto na carta
+que estamos usando, omitimos também o argumento. Na prática, muitos texto
+simplificam ainda mais e não incluem as derivadas parciais $\partial_\mu$ e
+chamam $v^\mu$ de vetor.
+
+\subsection{Comutador de campos}
+
+Sabemos agora que um campo vetorial $v$ leva um elemento de $\CINFM$ em outra
+função da variedade, ou seja, $v:\CINFM\to\CINFM$. Portanto, é natural que
+perguntemos, será que dados dois campos vetoriais $v$ e $u$, a composição
+$u(v(\cdot))$ é também uma derivação? Aplicando a um representante local $F$ temos,
+\begin{equation}
+	u(v(F)) = u^\mu\partial_\mu \left(v^\nu\partial_\nu F\right) =  \left(u^\mu\partial_\mu v^\nu\right)\partial_\nu F +  v^\nu u^\mu\partial_\mu\partial_\nu F.
+\end{equation}
+Para ser uma derivação precisamos que a ação dessa composição no produto de funções $FG$ satisfaça a regra de Leibniz,
+\begin{align}
+	u(v(FG)) & = \left(u^\mu\partial_\mu v^\nu\right)\partial_\nu (FG) +  v^\nu u^\mu\partial_\mu\partial_\nu (FG),              \\
+	         & = Gu(v(F)+Fu(v(G) + v^\nu u^\mu(\partial_\mu F) (\partial_\nu G) +  v^\nu u^\mu(\partial_\mu G) (\partial_\nu F).
+\end{align}
+A última expressão acima mostra que temos os termos que esperamos pela regra de
+Leibniz, porém existem dois termos extras. Por isso, a composição de dois campos
+vetoriais não é um campo vetorial. Agora, note que os termos extras são
+simétricos sobre a troca de $v$ e $u$, por isso, se tomarmos a aplicação
+antissimétrica desses dois campos, teremos um (possivelmente) novo campo
+vetorial, isto é,
+\begin{equation}
+	[u,v](FG) = G[u,v](F) + F[u,v](G), \quad [u,v](\cdot) \equiv u(v(\cdot)) - v(u(\cdot)).
+\end{equation}
+Chamamos o novo campo vetorial $[u,v]$ resultante da composição antissimétrica
+de $u$ e $v$ de comutador dos campos, é fácil ver que as componentes que sobram são,
+\begin{equation}
+	[u,v] = \left(u^\mu\partial_\mu v^\nu - v^\mu\partial_\mu u^\nu\right) \partial_\nu.
+\end{equation}
+Com isso, mostramos que os campos vetoriais (quando escritos em termos de
+derivações) tem naturalmente uma álgebra de Lie (caracterizada por esse produto
+antissimétrico, que satisfaz a identidade de Jacobi). Esse produto tem inúmeras aplicações, vamos mostrar mais a frente que ele está ligado a um conceite de derivada, chamada derivada de Lie, essa derivada é bastante útil quando queremos escrever equações de movimento já que ela se reduz a derivada parcial normal quando usamos um sistema de coordenadas adaptado.
+
+\section{Fibrado cotangente}
+
+Todo espaço vetorial tem associado um conceito natural de espaço dual, dessa
+forma podemos definir um espaço dual a cada $\TpM$, e de forma similar a $\TM$
+podemos definir um fibrado cotangente.
+
+\subsection{Espaço vetorial dual}
+
+\definition{Dado um espaço vetorial $\EV$ chamamo de espaço dual $\EV^*$ o
+	espaço dos funcionais lineares que mapeiam $v\in\EV$ em reais. Dessa forma se $l\in \EV^*$ então $l(v) \in \RR$. É fácil ver que esse espaço tem uma estrutura natural de espaço vetorial,
+	\begin{align}
+		\left(l+m\right) (v) & \equiv l(v)+m(v), & l,m & \in \EV^*, \\
+		\left(a l\right) (v) & \equiv a (l(v)),  & a   & \in \RR.
+	\end{align}
+	Note que novamente usamos a soma e multiplicação dos reais para definir a soma
+	dos vetores. }
+
+Como sabemos, um vetor qualquer $v\in\EV$ pode sempre ser escrito em termos de
+uma base $e_\mu\in\EV$, i.e., $v = v^\mu e_\mu$ e $v^\mu\in\RR$. Dessa forma,
+para calcular a aplicação de um funcional linear basta sabermos sua aplicação na
+base, isto é,
+\begin{equation}
+	l(v) = v^\mu l(e_\mu).
+\end{equation}
+A expressão acima mostra que o resultado da aplicação de um funcional linear em
+um vetor é dado pela soma das componentes de $v$ e as quantidades $l(e_\mu)$.
+Isso mostra também que o funcional $l$ é totalmente definido pelas quantidades
+$l(e_\mu)$ e consequentemente tem a mesma dimensão de $\EV$.
+
+Dada uma base $e_\mu\in\EV$ podemos definir uma base em $\EV^*$ usando a
+expressão  $e^\nu(e_\mu) = \delta_\mu{}^\nu$ onde $e^\nu\in\EV^*$. Note que para
+um $\nu$ fixo, essa expressão nos permite calcular as componentes de $e^\nu$
+nessa base, o que define totalmente esse funcional.
+
+
+\listofexercises
+
+\end{document}

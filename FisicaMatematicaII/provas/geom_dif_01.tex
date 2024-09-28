@@ -1,0 +1,65 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- Geometria Diferencial}
+
+\begin{document}
+
+\begin{enumerate}
+	\item Em uma variedade $M$ podemos escrever um campo vetorial como uma derivação,
+	      i.e.,
+	      \begin{equation}
+		      \bar{v} = v^\mu \frac{\partial}{\partial x^\mu},
+	      \end{equation}
+	      onde $x^\mu$ são as coordenadas em uma carta $(\psi, U)$.
+	      \begin{enumerate}
+		      \item O que acontece com as componentes do campo vetorial se mudarmos para
+		            uma segunda carta $(\phi,U)$ com coordenadas $y^\mu$ definida no mesmo
+		            aberto $U$.
+		      \item Como se transformam as um-formas $\tilde{w}=w_\mu\dd x^\mu$ quando
+		            fazemos a mesma mudança de carta do item anterior?
+	      \end{enumerate}
+	\item Os seguintes campos vetoriais formam uma base nos espaços tangentes do espaço
+	      euclidiano bidimensional $\mathbb{E}^2$:
+	      \begin{equation}
+		      \bar{r} = \cos\theta \frac{\partial}{\partial x}+\sin\theta
+		      \frac{\partial}{\partial y}, \qquad \bar{\theta} = -\sin\theta
+		      \frac{\partial}{\partial x}+\cos\theta \frac{\partial}{\partial y}.
+	      \end{equation}
+	      Onde usamos a mudança de cartas $x=r\cos\theta$ e $y=r\sin\theta$..
+	      \begin{enumerate}
+		      \item Mostre que de fato eles são linearmente independentes.
+		      \item A base é bem definida em todos os pontos de $\mathbb{E}^2$? Justifique.
+		      \item Mostre se essa base é coordenada.
+	      \end{enumerate}
+	\item Resolva a equação de Bessel abaixo usando o método de Frobenius, encontre as
+	      duas soluções linearmente independentes, considere que $\alpha \in \mathbb{Z}$
+	      (conjunto dos inteiros). faça também os itens abaixo.
+	      \begin{equation}\label{eq:bessel}
+		      x^2\frac{\dd^2 y(x)}{\dd x^2} + x\frac{\dd y(x)}{\dd x}+(x^2-\alpha^2)y(x) = 0.
+	      \end{equation}
+	      \begin{enumerate}
+		      \item Classifique os pontos do intervalo de $x\in\mathbb{R}$ (inclua
+		            também o ponto no infinito) como ordinário, singular regular ou
+		            singular irregular.
+		      \item O que mudaria no método de solução se $\alpha$ fosse um número real
+		            diferente de inteiros e semi-inteiros.
+	      \end{enumerate}
+	\item Usando a teoria de Sturm-Louville faça as seguintes atividades:
+	      \begin{enumerate}
+		      \item Escreva o operador diferencial associado a equação de
+		            Bessel~\eqref{eq:bessel}.
+		      \item Usando o produto interno:
+		            \begin{equation}
+			            \langle f|g\rangle = \int_0^L f^*(x)g(x)w(x)\dd x,
+		            \end{equation}
+		            determine qual deve ser a função peso $w(x)$ para que o operador do
+		            item anterior possa ser auto-adjunto.
+		      \item Uma vez encontrada a função peso $w(x)$ apropriada, quais condições
+		            sobre as soluções da Eq.~\eqref{eq:bessel} para que o operador seja
+		            auto-adjunto.
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}

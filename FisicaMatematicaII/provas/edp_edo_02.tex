@@ -1,0 +1,47 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- EDO e EDP}
+
+\begin{document}
+
+\begin{enumerate}
+	\item Considere o problema de auto-valor para o átomo de Hidrogênio abaixo e resolva
+	      as questões abaixo.
+	      \begin{equation}
+		      -\frac{\hbar^2}{2m}\vec{\nabla}^2\psi_\alpha-\frac{e^2\psi_\alpha}{4\pi\epsilon_0\vert\vec{x}\vert}=E_\alpha\psi_\alpha.
+	      \end{equation}
+	      \begin{enumerate}
+		      \item Faça a separação de variáveis e identifique as constantes de
+		            separação.
+		      \item Explique quais são as restrições sobre as constantes de separação e
+		            discuta quais são suas origens geométricas e/ou físicas.
+		      \item Se nos restringirmos a soluções concentradas (que vão a zero no
+		            infinito) quais são os valores possíveis para $E_\alpha$.
+		      \item Escreva a equação para a parte radial. Identifique as duas
+		            constantes com unidade de comprimento e explique a quais características
+		            do problema elas estão associadas.
+	      \end{enumerate}
+	\item Dada a formula de Rodrigues para os polinômios de Legendre:
+	      \begin{equation}
+		      P_\ell(x) = \frac{1}{\ell!2^\ell}\frac{\mathrm{d}^\ell}{\mathrm{d}x^\ell}\left[\left(x^2-1\right)^\ell\right].
+	      \end{equation}
+	      Calcule a norma dos polinômios usando a definição de norma:
+	      \begin{equation}
+		      \left|P_\ell\right| \equiv \sqrt{\langle P_\ell|P_{\ell}\rangle},\qquad \langle P_\ell|P_{\ell'}\rangle \equiv \int_{-1}^1 P_\ell(x)P_{\ell'}(x)\,\mathrm{d}x.
+	      \end{equation}
+	\item Usando a formula dos Harmônicos esféricos e a formula de Rodrigues para os
+	      polinômios associados de Legendre:
+	      \begin{align}
+		      Y_\ell^m(\theta,\phi) & = (-1)^m\sqrt{\frac{2\ell+1}{4\pi}\frac{(\ell-m)!}{(\ell+m)!}}P_\ell^m(\cos\theta)e^{im\phi},           \\
+		      P_\ell^m(x)           & = \frac{(-1)^m}{2^\ell \ell!}(1-x^2)^{m/2}\frac{\mathrm{d}^{\ell+m}}{\mathrm{d}x^{\ell+m}}(x^2-1)^\ell.
+	      \end{align}
+	      Calcule explicitamente todos os Harmônicos até $\ell=2$ e mostre como eles
+	      podem ser escritos em termos das componentes $(n^1,n^2,n^3)$ do vetor
+	      \begin{equation}
+		      \hat{\vec{n}} = \sin\theta\cos\phi\;\vec{e}_1+\sin\theta\sin\phi\;\vec{e}_2+\cos\theta\;\vec{e}_3.
+	      \end{equation}
+\end{enumerate}
+
+\end{document}
