@@ -1,7 +1,7 @@
 \ifuseseminar
-    \documentclass[brazilian,seminar,twoside,onecolumn]{lecture/lecture}
+    \documentclass[brazilian,seminar,twoside,onecolumn]{lecture}
 \else
-    \documentclass[brazilian,course,twoside,onecolumn]{lecture/lecture}
+    \documentclass[brazilian,course,twoside,onecolumn]{lecture}
 \fi
 
 \usepackage{geometry}
