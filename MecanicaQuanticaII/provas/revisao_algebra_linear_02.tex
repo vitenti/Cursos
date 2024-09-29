@@ -1,0 +1,41 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Álgebra Linear}
+
+\begin{document}
+\begin{enumerate}
+	\item Considere a operação de dilatação definida por:
+	      \begin{equation}
+		      D(\lambda)\ket{\vec{x}}=N(\lambda)\ket{\vec{x}e^\lambda},
+	      \end{equation}
+	      onde $\vec{x}$ é o vetor posição, $N(\lambda)$ é a normalização do novo estado
+	      e $\lambda$ é um parâmetro real. Supondo que $D(\lambda)$ é um operador
+	      unitário (que preserva, por exemplo, $\braket{\vec{x}_1|\vec{x}_2} =
+		      \delta^3(\vec{x}_1-\vec{x}_2)$), calcule a norma $N(\lambda)$ ignorando
+	      qualquer fase constante.
+	\item Use o resultado da questão acima para mostrar que a ação do operador
+	      $D(\lambda)$ sobre uma função de onda $\psi(\vec{x})$ é:
+	      \begin{equation}
+		      D(\lambda)\psi(\vec{x}) = e^{-3\lambda/2}\psi\left(\vec{x}e^{-\lambda}\right).
+	      \end{equation}
+	\item Mostre explicitamente que se $\psi(\vec{x})$ é normalizada
+	      $e^{-3\lambda/2}\psi\left(\vec{x}e^{-\lambda}\right)$ também será.
+	\item Escrevendo o operador de dilatação em termos do gerador $\hat{d}$ como
+	      \begin{equation}
+		      D(\lambda) = e^{-i\lambda\hat{d}/\hbar},
+	      \end{equation}
+	      mostre que
+	      \begin{equation}
+		      \hat{d} = \frac{\hat{\vec{x}}\cdot\hat{\vec{p}}+\hat{\vec{p}}\cdot\hat{\vec{x}}}{2},
+	      \end{equation}
+	      onde $\hat{\vec{x}}$ e $\hat{\vec{p}}$ são os operadores vetoriais posição e
+	      momento, respectivamente.
+	\item Calcule o comutador de $\hat{d}$ com $\hat{\vec{x}}$, $\hat{\vec{p}}$ e
+	      $\hat{\vec{L}}$ (sendo o último o operador vetorial contendo os geradores de
+	      rotação). Podemos dizer que o operador $\hat{d}$ é escalar ou vetorial? Justifique a
+	      sua resposta.
+\end{enumerate}
+
+\end{document}

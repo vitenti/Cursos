@@ -1,0 +1,53 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Teoria de Perturbações}
+
+\begin{document}
+\begin{enumerate}
+	\item Quando aplicamos a teoria de perturbações a um sistema, estamos supondo que o
+	      Hamiltoniano do sistema é dado por $\hat{H} = \hat{H}_0 + \hat{H}_1$, onde
+	      $\hat{H}_0$ é o Hamiltoniano de um sistema cujas soluções são conhecidas e
+	      $\hat{H}_1$ é uma perturbação que afeta o sistema. A ideia é que o
+	      Hamiltoniano $\hat{H}_1$ é pequeno em relação a $\hat{H}_0$. Responda:
+	      \begin{enumerate}
+		      \item O que significa dizer que $\hat{H}_1$ é pequeno em relação a
+		            $\hat{H}_0$? Quais são as hipóteses que devem ser satisfeitas para
+		            que a teoria de perturbações seja aplicável?
+		      \item Dados os autoestados de $\hat{H}_0$, $\ket{n^{(0)}}$, e os
+		            autovalores correspondentes, $E_n^{(0)}$, onde $n$ é o índice que
+		            rotula os autoestados. Mostre como podemos encontrar as correções
+		            de primeira ordem para os autoestados e autovalores do Hamiltoniano
+		            total $H$.
+		      \item No caso do oscilador harmônico, cuja Hamiltoniana é dada por
+		            $\hat{H}_0 = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2 \hat{x}^2$,
+		            mostre os efeitos da perturbação $\hat{H}_1 =  -qf\hat{x}$ nos
+		            autoestados e autovalores do sistema. Lembre-se que $\hat{x} =
+			            \sqrt{\frac{\hbar}{2m\omega}}(\hat{a} + \hat{a}^\dagger)$ e que
+		            $\hat{a}\ket{n} = \sqrt{n}\ket{n-1}$ e $\hat{a}^\dagger\ket{n} =
+			            \sqrt{n+1}\ket{n+1}$.
+	      \end{enumerate}
+	\item Na teoria de perturbações dependente do tempo estamos interessados em sistemas
+	      cujos Hamiltonianos são dados por $\hat{H} = \hat{H}_0 + \hat{H}_1(t)$, onde
+	      $\hat{H}_0$ é o Hamiltoniano de um sistema cujas soluções são conhecidas e
+	      $\hat{H}_1(t)$ é uma perturbação que afeta o sistema. Responda:
+	      \begin{enumerate}
+		      \item Quais são as hipóteses que devem ser satisfeitas para que a teoria de
+		            perturbações dependente do tempo seja aplicável? Que tipo de problemas
+		            procuramos resolver com essa teoria?
+		      \item Dados os autoestados de $\hat{H}_0$, $\ket{n^{(0)}}$, e os autovalores
+		            correspondentes, $E_n^{(0)}$, onde $n$ é o índice que rotula os
+		            autoestados. Mostre como podemos encontrar uma equação para as
+		            componentes da solução $\ket{\psi(t)}$ de forma que a evolução
+		            temporal devida a $\hat{H}_0$ fatorada. Ou seja, dado
+		            $$\ket{\psi(t)} = \sum_n c_n(t)\ket{n^{(0)}},$$ reescreva as
+		            componentes $c_n(t) = d_n(t)s^0_n(t)$ para que a equação de
+		            Schrödinger com $\hat{H} = \hat{H}_0$ seja resolvida exatamente para
+		            $d_n(t)$ constante.
+		      \item Encontre a equação para $d_n(t)$ em primeira ordem. Escreva a
+		            solução para $d_n(t)$ em termos de uma integral temporal.
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}

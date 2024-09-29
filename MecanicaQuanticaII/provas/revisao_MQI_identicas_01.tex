@@ -1,0 +1,75 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Revisão e Partículas Idênticas}
+
+\begin{document}
+\begin{enumerate}
+	\item Oscilador Harmônico
+	      \begin{enumerate}
+		      \item Dado os operadores de aniquilação e criação definidos em termos dos
+		            operadores de posição e momento:
+		            \begin{align}
+			            \hat{a}^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x} -
+			            \frac{i}{m\omega}\hat{p}\right), \qquad \hat{a} =
+			            \sqrt{\frac{m\omega}{2\hbar}}\left(\hat{x} + \frac{i}{m\omega}\hat{p}\right).
+		            \end{align}
+		            Calcule o comutador desses operadores e mostre que a Hamiltoniana
+		            pode ser escrita da forma:
+		            \begin{equation}
+			            \hat{H} = \frac{\hat{p}^2}{2m} + \frac{m\omega^2\hat{x}^2}{2}=
+			            \hbar\omega \left( \hat{a}^\dagger \hat{a} + \frac{1}{2} \right).
+		            \end{equation}
+		      \item A partir da equação de auto-estado da Hamiltoniana, $\hat{H}\ket{E}
+			            = E\ket{E}$ use o comutador de $\hat{H}$ com os operadores de criação e
+		            aniquilação mostre quais são os possíveis valores de $E$. Note que um
+		            passo importante é impor que a Hamiltoniana tenha autovalores positivos
+		            definidos, como isso pode ser justificado usando a Eq.~(2)?
+	      \end{enumerate}
+	\item Átomo de Hidrogênio
+	      \begin{enumerate}
+		      \item A partir do Hamiltoniano do átomo de hidrogênio $\hat{H} =
+			            -\frac{\hbar^2}{2m} \nabla^2 - \frac{e^2}{4\pi\epsilon_0 r}$, descreva a
+		            dedução dos autoestados da energia. Uma descrição qualitativa dos passos é
+		            suficiente.
+		      \item Quais são as propriedades da geometria do sistema, em termos das
+		            coordenadas $(r,\theta,\phi)$, que limitam os autovalores de $\hat{H}$ e
+		            como essa limitação se dá?
+		      \item Quando estudamos a parte radial da solução, quais considerações
+		            físicas sobre a função de onda são necessárias para encontrar os estados
+		            ligados?
+	      \end{enumerate}
+	\item Considere um sistema de duas partículas {\bf idênticas} e responda às questões
+	      abaixo:
+	      \begin{enumerate}
+		      \item Considere que o estado de uma partícula é descrito por $\ket{a} \in
+			            \mathbb{V}$. Utilize o produto tensorial para definir os dois possíveis
+		            espaços para os estados de duas partículas.
+		      \item Definimos um estado separável de duas partículas como sendo da forma
+		            $\ket{\psi} = \ket{a}\otimes\ket{b}$. Os estados que não podem ser
+		            escritos dessa forma são chamados emaranhados. Os estados representando
+		            duas partículas idênticas podem ser separáveis? Justifique sua resposta.
+		      \item Com base nas respostas anteriores, explique como podemos realizar
+		            experimentos em laboratório para medir o estado de uma partícula
+		            $\ket{a}$ sem considerar todas as outras partículas idênticas presentes no
+		            sistema. Para tanto, considere dois estados $\ket{T}$ e $\ket{L}$
+		            representando pacotes gaussianos na Terra e na Lua, respectivamente, onde
+		            $$\braket{x|T} =
+			            \frac{1}{(2\pi)^{1/4}}\exp\left(-\frac{(x-\mu_T)^2}{4}\right),
+			            \qquad \braket{x|L} =
+			            \frac{1}{(2\pi)^{1/4}}\exp\left(-\frac{(x-\mu_L)^2}{4}\right),$$ com
+		            $\mu_L\gg\mu_T$. Demonstre que tanto o estado simétrico quanto o
+		            anti-simétrico de $\ket{L}$ e $\ket{T}$ são aproximadamente
+		            separáveis quando calculamos a função de onda do conjunto em $(x_L,
+			            x_T)$ onde $|x_T-\mu_L|\gg1$ e $|x_L-\mu_T|\gg1$.
+		      \item Explique como podemos testar empiricamente se o estado de duas
+		            partículas é simétrico ou anti-simétrico. Descreva como a simetria e a
+		            anti-simetria estão relacionadas ao conceito de troca de partículas
+		            idênticas e como as técnicas experimentais podem ser usadas para medir os
+		            estados de duas partículas e verificar sua simetria.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

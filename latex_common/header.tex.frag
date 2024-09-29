@@ -16,6 +16,7 @@
 \usepackage{chngcntr}
 \usepackage{stackengine}
 \usepackage{bm}
+\usepackage{bbm}
 
 \usepackage{tasks}
 \setlength{\headheight}{41.0pt}
@@ -48,7 +49,7 @@
     {\noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
 \setlength{\QuestionIndent}{16pt}
 
-\renewcommand{\vec}{\boldsymbol}
+\renewcommand{\vec}{\bm}
 \newcommand{\VARM}{\mathcal{M}}
 \newcommand{\FT}{\mathrm{T}}
 \newcommand{\FD}{\mathrm{D}}

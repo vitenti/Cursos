@@ -1,0 +1,81 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Spin e Momento Angular}
+
+\begin{document}
+\begin{enumerate}
+	\item Dadas as matrizes de Pauli abaixo, responda às questões.
+	      \begin{align*}
+		      \sigma_x & = \begin{pmatrix}
+			                   0 & 1 \\
+			                   1 & 0 \\
+		                   \end{pmatrix}, &
+		      \sigma_y & = \begin{pmatrix}
+			                   0 & -i \\
+			                   i & 0  \\
+		                   \end{pmatrix}, &
+		      \sigma_z = \begin{pmatrix}
+			                 1 & 0  \\
+			                 0 & -1 \\
+		                 \end{pmatrix}.
+	      \end{align*}
+	      \begin{enumerate}
+		      \item Explique qual é a relação entre essas matrizes e os elementos de
+		            matriz dos operadores de Spin $\hat{S}_x,\,\hat{S}_y,\,\hat{S}_z$.
+		      \item Descreva como os elementos de matriz estão relacionados à base
+		            $\ket{j,m}$, onde $j$ é o rótulo do momento angular total
+		            $\hat{\vec{S}}^2$ e $m$ é o rótulo da projeção do momento angular ao longo
+		            do eixo $z$, ou seja, $\hat{S}_z$.
+		      \item Explique como é possível utilizar as matrizes de Pauli apresentadas
+		            para calcular explicitamente os elementos do grupo de rotação. Utilize a
+		            fórmula explícita abaixo como referência:
+		            $$ U[R] = e^{-i\vec{\theta}\cdot\vec{S}/\hbar} $$ Descreva o
+		            procedimento passo a passo e discuta como as propriedades das
+		            matrizes de Pauli estão relacionadas com o resultado.
+		      \item Utilizando a representação dos elementos do grupo de rotação,
+		            encontre as duas rotações necessárias para transformar o vetor unitário na
+		            direção $z$, $\vec{e}_3$, em um vetor unitário $\vec{n} =
+			            (\sin\theta\cos\phi,\, \sin\theta\sin\phi,\, \cos\theta)$. Em seguida,
+		            usando essas rotações, encontre o Spinor que representa um estado de Spin
+		            positivo na direção $\vec{n}$.
+	      \end{enumerate}
+	\item Considere o termo de interação dado por $H_\mathrm{int} = -\gamma
+		      \vec{S}\cdot\vec{B}$, onde $\vec{S}$ é o vetor de spin e $\vec{B}$ é um campo
+	      magnético constante na direção $\vec{e}_3$. Responda às seguintes questões:
+	      \begin{enumerate}
+		      \item Dado um Spinor inicial $\psi_0$ que é autovetor de
+		            $\vec{n}\cdot\vec{S}$, descreva como ocorre a evolução desse estado
+		            considerando apenas o termo de interação como a Hamiltoniana. Calcule
+		            explicitamente $\psi(t)$.
+		      \item Calcule os autovetores de $\sigma_x$ e $\sigma_y$, usando esses
+		            estados determine a probabilidade de encontrar o spin positivo nas
+		            direções $x$ e $y$ em função do tempo. Interprete o resultado fisicamente.
+	      \end{enumerate}
+	\item Adição de momento angular: Considere duas representações irredutíveis
+	      rotuladas por $j_1$ e $j_2$, ou seja, $\mathbb{V}_{j_1}$ e $\mathbb{V}_{j_2}$. O
+	      espaço formado pelo produto tensorial dessas duas representações
+	      ($\mathbb{V}_{j_1}\otimes\mathbb{V}_{j_2}$) não é irredutível, portanto, pode ser
+	      decomposto como uma soma direta de representações irredutíveis. Essas representações
+	      estão relacionadas ao operador de momento angular total $\hat{\vec{J}} =
+		      \hat{\vec{J}}_1 + \hat{\vec{J}}_2$. Com base nessas informações, responda às
+	      seguintes perguntas:
+	      \begin{enumerate}
+		      \item Quais são os possíveis valores para o momento angular total que
+		            podem aparecer na soma direta? (Leve em consideração os possíveis valores
+		            de $\hat{J}_z$).
+		      \item Quantas vezes cada um desses valores do momento angular total
+		            aparece na soma direta? (Conte quantas vezes o mesmo autovalor de
+		            $\hat{J}_z$ pode ser encontrado).
+		      \item Usando os resultados anteriores escreva explicitamente a
+		            decomposição de $\mathbb{V}_{2}\otimes\mathbb{V}_{3/2}$ em uma soma
+		            direta.
+		      \item Considere uma partícula composta em um estado de Spin total $s=0$
+		            que decai em duas partículas de Spin $s_1=s_2=1/2$. Qual é o estado final
+		            do sistema na representação $\mathbb{V}_{1/2}\otimes\mathbb{V}_{1/2}$?
+		            Desconsidere qualquer momento angular orbital.
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,74 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Partículas Idênticas e Transformações}
+
+\begin{document}
+\begin{enumerate}
+	\item Considere um sistema de duas partículas idênticas e responda às questões
+	      abaixo:
+	      \begin{enumerate}
+		      \item Considere que o estado de uma partícula é descrito por $\ket{a} \in
+			            \mathbb{V}$. Utilize o produto tensorial para definir os dois possíveis
+		            espaços para os estados de duas partículas.
+		      \item Definimos um estado separável de duas partículas como sendo da forma
+		            $\ket{\psi} = \ket{a}\otimes\ket{b}$. Os estados que não podem ser
+		            escritos dessa forma são chamados emaranhados. Os estados representando
+		            duas partículas idênticas podem ser separáveis? Justifique sua resposta.
+		      \item Com base nas respostas dos itens anteriores, explique como podemos
+		            realizar experimentos em laboratório medindo o estado de uma partícula
+		            $\ket{a}$ sem considerar todas as outras partículas idênticas presentes no
+		            sistema.
+		      \item Explique como podemos testar empiricamente se o estado de duas
+		            partículas é simétrico ou anti-simétrico. Descreva como a simetria e a
+		            anti-simetria estão relacionadas ao conceito de troca de partículas
+		            idênticas e como as técnicas experimentais podem ser usadas para medir os
+		            estados de duas partículas e verificar sua simetria.
+	      \end{enumerate}
+	\item Considere um grupo aditivo de transformações a um parâmetro, que é um mapa
+	      suave $\mathbb{R} \to \mathrm{Op}(\mathbb{V})$ dado por $T(\epsilon)$ que satisfaz
+	      as seguintes propriedades:
+	      \begin{itemize}
+		      \item $T(\epsilon_2)T(\epsilon_1) = T(\epsilon_1+\epsilon_2)$, onde
+		            $\epsilon_1,\epsilon_2 \in \mathbb{R}$;
+		      \item $T(0)$ é a identidade, ou seja, $T(0)=\mathbbm{1}$;
+		      \item $T^\dagger(\epsilon)T(\epsilon)=\mathbbm{1}$, onde $T^\dagger$ é o adjunto de $T$.
+	      \end{itemize}
+	      Responda as seguintes questões:
+	      \begin{enumerate}
+		      \item Mostre que $T^\dagger(\epsilon) = T(-\epsilon)$.
+		      \item Explique o conceito de gerador e mostre que o operador gerador é
+		            anti-Hermitiano. Como podemos definir um operador que seja Hermitiano?
+		      \item Considere uma função dos operadores básicos $\widehat{X}$ e
+		            $\widehat{P}$, $\Omega(\widehat{X}, \widehat{P})$. Explique como podemos
+		            reescrever a operação $T^\dagger(\epsilon)\Omega(\widehat{X},
+			            \widehat{P})T(\epsilon)$.
+	      \end{enumerate}
+	\item Considere o operador de inversão espacial $\Pi$, que inverte as coordenadas
+	      espaciais de um sistema. Prove que $\Pi$ é um operador idempotente, ou seja,
+	      $\Pi^2 = \mathbbm{1}$. Em termos de funções de onda, quais são as auto-funções
+	      do operador $\Pi$ e seus autovalores correspondentes? Além disso, suponha que
+	      a Hamiltoniana do sistema é invariante sob inversão espacial, ou seja, $\Pi
+		      \widehat{H} \Pi = \widehat{H}$. Nesse caso, quais características da função de
+	      onda são conservadas? Explique.
+	\item Considere a álgebra dos geradores de rotação $\widehat{\vec{L}} \times
+		      \widehat{\vec{L}} = i\hbar\widehat{\vec{L}}$, e seja $\widehat{L}^2$ o operador
+	      momento angular total e $\widehat{L}_z$ o operador componente $z$ do momento
+	      angular. Suponha que existem autoestados comuns $\ket{\alpha\beta}$ de
+	      $\widehat{L}^2$ e $\widehat{L}_z$, ou seja, $\widehat{L}^2\ket{\alpha\beta} =
+		      \alpha\ket{\alpha\beta}$ e $\widehat{L}_z\ket{\alpha\beta} =
+		      \beta\ket{\alpha\beta}$. Responda às seguintes perguntas:
+	      \begin{enumerate}
+		      \item Explique por que podemos definir um autoestado simultâneo de
+		            $\widehat{L}^2$ e $\widehat{L}_z$.
+		      \item Defina os operadores de escada $\widehat{L}_+$ e $\widehat{L}_-$ e
+		            calcule seus comutadores com $\widehat{L}_i$ e $\widehat{L}^2$.
+		      \item Mostre como os operadores de escada atuam nos estados $\ket{\alpha\beta}$.
+		      \item Se $\widehat{L}_i$ são auto-adjuntos, mostre que deve existir uma
+		            relação entre $\alpha$ e $\beta$. Qual é o significado físico dessa
+		            relação?
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}
