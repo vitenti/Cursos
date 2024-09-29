@@ -1,0 +1,80 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Física Matemática II -- Geometria Diferencial}	
+
+\begin{document}
+
+\begin{enumerate}
+	\item Seja $M$ uma variedade diferenciável, suponha uma função suave $f:M\rightarrow
+		      \mathbb{R}$ na variedade, mostre que $F=f\circ \phi^{-1}:\mathbb{R}^n\rightarrow
+		      \mathbb{R}$ será suave qualquer que seja a carta $(U,\phi)\subset M$.
+	\item O círculo unitário pode ser definido como $S^1=\left\{(x,y)\in \mathbb{R}^2;
+		      x^2+y^2=1\right\}$, mostre explicitamente que $S^1$ é uma variedade
+	      diferenciável.\vspace{-0.4cm}\\
+	      Dica: Procure um atlas para a variedade, evidenciando a suavidade dos mapas e suas
+	      inversas nas sobreposições das cartas.
+	\item Sabendo que o vetor tangente em um ponto $p\in M$ é definido como
+	      $v_p=[\lambda]$, onde $\lambda:(a,b)\subset \mathbb{R}\rightarrow M$ é uma curva na
+	      variedade.
+	      \begin{enumerate}
+		      \item Mostre que a multiplicação por escalar de um vetor tangente não depende do
+		            sistema de coordenadas escolhido, i.e, qualquer que seja a carta $(U,\phi)$
+		            \begin{align}
+			            rv=[\phi^{-1}\circ(r\phi\circ \lambda)], \ \ \ \forall r\in \mathbb{R}
+		            \end{align}
+		      \item A operação de soma dos vetores é definido como
+		            \begin{align}
+			            v_1+v_2=[\phi^{-1}\circ(\phi\circ\lambda_1+\phi\circ\lambda_2)]
+		            \end{align}
+		            Prove que o espaço $T_pM$ é um espaço vetorial.
+	      \end{enumerate}
+	\item Seja o mapa $h:\mathbb{R}^2\rightarrow\mathbb{R}^2$, para $\alpha$ fixo
+	      \begin{align}
+		      h=	\left(\begin{matrix}
+			               u \\
+			               v \\
+		               \end{matrix}\right)=\left(\begin{matrix}
+			                                         cos(\alpha) & -sen(\alpha) \\
+			                                         sen(\alpha) & cos(\alpha)  \\
+		                                         \end{matrix}\right)
+		      \left(\begin{matrix}
+			            x \\
+			            y \\
+		            \end{matrix}\right)
+	      \end{align}
+	      Para um campo vetorial $X=-y\partial/\partial x+x\partial/\partial y$,
+	      determine o vetor $h_*(X)\in T_{h(x,y)}\mathbb{R}^2$. %COmentar que se o
+	      Sandro n passou campo vetorial posso pedir um vetor tangente em um determinado
+	      ponto mas manter a estrutura do problema.
+	\item Dado um sistema de coordenadas local $(U,\phi)$ em $p \in M$, podemos definir
+	      um conjunto de derivações em $p$ por
+	      \begin{align}
+		      \left.\dfrac{\partial}{\partial x^{\mu}}\right|_{p}f=
+		      \left.\dfrac{\partial}{\partial u^{\mu}}f\circ\phi^{-1}\right|_{\phi(p)}\qquad
+		      \mu=1,...,\text{dim}(M)
+	      \end{align}
+	      \begin{enumerate}
+		      \item Para uma carta $(U,\phi)$ prove que
+		            \begin{align}
+			            \phi_*\left(\left.\dfrac{\partial}{\partial x^{\mu}}\right|_{p}\right) =
+			            \left.\dfrac{\partial}{\partial u^{\mu}}\right|_{\phi(p)}
+		            \end{align}
+		            Dica: $\phi_*\left(\left.\dfrac{d}{\partial x^{\mu}}\right|_p\right)f =
+			            \left.\dfrac{\partial}{\partial x^{\mu}}\right|_{p}f\circ \phi$
+		      \item  Seja uma curva $\lambda:(a,b)\subset\mathbb{R}\rightarrow M$,
+		            assumindo que $c(0)=p \in M$, o vetor velocidade $v_{\lambda}(t)$ da curva
+		            $\lambda$ é definido como
+		            \begin{align}
+			            v_{\lambda}(t)=\dfrac{d\lambda}{dt}(t)\equiv
+			            \lambda_*\left(\left.\dfrac{d}{dt}\right|_t\right)\in T_{\lambda(t)}M
+		            \end{align}
+		            Calcule o vetor velocidade da curva
+		            $\lambda:\mathbb{R}\rightarrow\mathbb{R}^2$
+		            \begin{align}
+			            \lambda=(t^2,t^3).
+		            \end{align}
+	      \end{enumerate}
+\end{enumerate}
+\end{document}
