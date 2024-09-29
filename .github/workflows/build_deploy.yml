@@ -21,5 +21,6 @@ jobs:
 
       - name: Build LaTeX files
         run: |
-          export TEXINPUTS="${GITHUB_WORKSPACE}//:.:"
+          export TEXINPUTS=".:${TEXINPUTS}:${PWD}//"
+          echo $TEXINPUTS
           find . -name "*.tex" -execdir latexmk -pdf {} \;
