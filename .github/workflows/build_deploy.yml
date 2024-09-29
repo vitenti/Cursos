@@ -21,6 +21,7 @@ jobs:
 
       - name: Build LaTeX files
         run: |
-          export TEXINPUTS=".:${TEXINPUTS}:${PWD}//"
+          export TEXINPUTS=".:${TEXINPUTS}:${PWD}/latex_common//:${PWD}/latex_common/lecture//:"
           echo $TEXINPUTS
+          ls "${PWD}/latex_common/lecture"
           find . -name "*.tex" -execdir latexmk -pdf {} \;
