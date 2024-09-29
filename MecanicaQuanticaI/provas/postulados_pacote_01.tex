@@ -1,0 +1,67 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica I -- Postulados e Pacote de Ondas}
+
+\begin{document}
+
+\begin{enumerate}
+	\item Um dos postulados fundamentais da mecânica quântica estabelece a comutação não
+	      nula entre os operadores posição ($\hat{x}$) e momento linear ($\hat{p}$), dada por
+	      $$[\hat{x}, \hat{p}] = i\hbar.$$
+	      \begin{enumerate}
+		      \item Na mecânica clássica, posição e momento desempenham papéis
+		            fundamentais como observáveis e geradores de transformações. Descreva
+		            sucintamente como essas grandezas se manifestam nesses contextos,
+		            destacando sua relevância no formalismo clássico.
+		      \item Para compreender a origem desse postulado na mecânica clássica, é
+		            crucial analisar o papel desses operadores em termos de uma estrutura
+		            específica. Explique como o comutador de $\hat{x}$ e $\hat{p}$ está
+		            intrinsecamente ligado à estrutura clássica.
+	      \end{enumerate}
+	\item Dado um estado quântico $|\psi\rangle$ e dois observáveis $\widehat{A}$ e
+	      $\widehat{B}$ com autovetores dados respectivamente por $|a\rangle$ e $|b\rangle$:
+	      \begin{enumerate}
+		      \item Defina o que significa dizer que $\widehat{A}$ e $\widehat{B}$ são
+		            observáveis compatíveis.
+		      \item Se $[\widehat{A}, \widehat{B}] = 0$ e nenhum operador é degenerado,
+		            descreva em detalhes o que acontece com $|\psi\rangle$ ao fazermos medidas
+		            sequenciais de $\widehat{A}$ e $\widehat{B}$.
+		      \item Agora, considere o caso em que $\widehat{A}$ é degenerado. Explique
+		            como a degeneração afeta o procedimento de medidas sequenciais de
+		            $\widehat{A}$ e $\widehat{B}$ em $|\psi\rangle$.
+	      \end{enumerate}
+	\item Seja $\rho$ a matriz densidade de um sistema quântico.
+	      \begin{enumerate}
+		      \item Escreva a expressão geral para $\rho$ em termos dos estados puros
+		            $|\psi_i\rangle$ com probabilidades $r_i$ tal que $\sum_i r_i = 1$.
+		      \item Suponha que $r_1 \neq 0 $ e $r_2 = 1 - r_1$, e que todos os outros
+		            estados puros têm probabilidade zero. Considere os estados puros dados
+		            por:
+		            \begin{align}
+			            |\psi_1\rangle & = \alpha_1 |E_1\rangle + \beta_1 |E_2\rangle, \\
+			            |\psi_2\rangle & = \alpha_2 |E_1\rangle + \beta_2 |E_2\rangle,
+		            \end{align}
+		            onde $|\alpha_1|^2 + |\beta_1|^2 = 1$ e $|\alpha_2|^2 + |\beta_2|^2 = 1$.
+		            Calcule a probabilidade de encontrar o sistema no estado $|E_1\rangle$.
+		      \item Explique o significado da probabilidade obtida no item anterior.
+	      \end{enumerate}
+	\item Considere um pacote de onda Gaussiano livre dado por
+	      $$
+		      \psi(x,0) = \left(\frac{1}{2\pi \sigma^2}\right)^{1/4} \exp\left[{-\frac{x^2}{4\sigma^2}}\right]
+	      $$
+	      onde $\sigma > 0$ é o desvio padrão.
+	      \begin{enumerate}
+		      \item Calcule a dispersão ($\Delta x\Delta p$) inicial do pacote de onda,
+		            onde \(\Delta x\) é o desvio padrão da posição e \(\Delta p\) é o desvio
+		            padrão do momento.
+		      \item Usando a representação do momento calcule a evolução temporal desse
+		            pacote.
+		      \item Calcule a dispersão (\(\Delta x\Delta p\)) para um instante $t$
+		            qualquer, discuta o resultado.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

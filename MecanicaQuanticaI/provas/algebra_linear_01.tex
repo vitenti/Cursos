@@ -1,0 +1,64 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica I -- Álgebra Linear}	
+
+\begin{document}
+
+\begin{enumerate}
+	\item Espaços vetoriais $\mathbb{V}$:
+	      \begin{enumerate}
+		      \item Explique o conceito de independência linear.
+		      \item Explique a distinção entre um conjunto de vetores Linearmente
+		            Independentes (LI) e uma base.
+		      \item Dada uma base de vetores $|e_i\rangle$ (onde $i=1\dots n$), demonstre
+		            que qualquer vetor $|v\rangle$ pode sempre ser expresso como uma combinação
+		            linear única dos vetores da base. Qual é o nome dado aos coeficientes nesse
+		            contexto?
+	      \end{enumerate}
+	\item Espaço dual $\mathbb{V}^*$:
+	      \begin{enumerate}
+		      \item Dado um espaço vetorial $\mathbb{V}$, defina o seu espaço dual
+		            $\mathbb{V}^*$. Os elementos deste espaço são representados como
+		            $\langle w|$ e são denominados covetores.
+		      \item Em um espaço vetorial $\mathbb{V}$ que possui um produto interno
+		            $\left(|v\rangle, |u\rangle\right) \in
+			            \mathbb{R}\;\text{ou}\;\mathbb{C}$, como podemos usar essa estrutura
+		            para definir elementos de $\mathbb{V}^*$ a partir de elementos de
+		            $\mathbb{V}$?
+		      \item Usando o mapa definido no item anterior, temos que $|v\rangle$ pode
+		            ser levado em um covetor $\langle v|$. Mostre que um vetor
+		            $a|v\rangle$, onde $a\in\mathbb{C}$ é levado pelo mesmo mapa no
+		            covetor $a^*\langle v|$.
+		      \item O mapa do item anterior pode sempre ser definido? Explique e dê
+		            exemplos para ilustrar suas explicação.
+	      \end{enumerate}
+	\item Operadores $\mathrm{Op}\left(\mathbb{V}\right)$:
+	      \begin{enumerate}
+		      \item Dado um operador autoadjunto, mostre que seus autovetores tem
+		            autovalores reais. Mostre também que autovetores com autovalores diferentes
+		            são sempre ortogonais.
+		      \item Com base no item anterior, é possível afirmar que os autovetores
+		            sempre formam uma base ortonormal?
+		      \item Dada uma função suave $f:\mathbb{R}\to\mathbb{R}$, como podemos usar
+		            essa função para definir uma função
+		            $f:\mathrm{Op}\left(\mathbb{V}\right)\to\mathrm{Op}\left(\mathbb{V}\right)$?
+		      \item Em uma base continua $|x\rangle,\;\forall\;x\in\mathbb{R}$, chamamos
+		            o produto $\psi(x) = \langle x|\psi\rangle$ de função de onda.
+		            Mostre que se o operador de translação $T_\epsilon$ tem a seguinte
+		            ação $T_\epsilon|x\rangle = |x+\epsilon\rangle$, então $\langle
+			            x|T_\epsilon|\psi\rangle = \psi(x-\epsilon)$.
+		      \item Use o resultado do item anterior mostre que o gerador $\hat{K}$,
+		            definido na expressão $T_\epsilon \approx \mathbb{I} - i \epsilon
+			            \hat{K}$, tem a seguinte ação: $$\langle x|\hat{K}|\psi\rangle =
+			            -i\frac{\partial}{\partial x}\psi(x).$$
+	      \end{enumerate}
+	\item Revisão de Mecânica Clássica:
+	      \begin{enumerate}
+		      \item Espaço de fase: explique como descrever os estados clássicos, ou seja, quais variáveis são necessárias para especificar completamente o estado de uma partícula física. Por simplicidade se baseie em um sistema de uma partícula em uma dimensão espacial.
+		      \item Escreva a segunda lei de Newton no espaço de fase.
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}
