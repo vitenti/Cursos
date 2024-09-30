@@ -10,6 +10,8 @@ Cosmologia](https://youtube.com/@vitenti?si=CyTNZltN4zxoTKrj).
 Sinta-se à vontade para contribuir criando **issues** ou participando das
 **discussions** caso tenha dúvidas ou sugestões sobre o material.
 
+> Os PDFs podem ser baixados diretamente de [PDFs](https://vitenti.github.io/Cursos/).
+
 # Aviso
 
 Este material pode estar incompleto ou conter erros, incluindo erros de digitação
