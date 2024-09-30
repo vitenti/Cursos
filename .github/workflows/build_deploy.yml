@@ -21,11 +21,28 @@ jobs:
 
       - name: Build LaTeX files
         run: |
+          mkdir -p build
           export TEXINPUTS=".:${PWD}/latex_common//:${TEXINPUTS}:"
-          find . -name "*.tex" -execdir latexmk -pdf {} \;
+          find . -name "*.tex" -execdir latexmk -pdf -output-directory=build {} \;
 
       - name: Upload PDF as Artifact
         uses: actions/upload-artifact@v4
         with:
           name: generated-pdfs
           path: "**/*.pdf"
+      - name: Generate HTML Index
+        run: |
+            # Create an index.html file with links to all PDFs in the build directory
+            echo "<html><body><h1>PDF List</h1><ul>" > build/index.html
+            find build -name "*.pdf" | sed 's#build/##' | while read pdf; do
+              echo "<li><a href=\"$pdf\">$(basename $pdf)</a></li>" >> build/index.html
+            done
+            echo "</ul></body></html>" >> build/index.html
+  
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./build
+            force_orphan: true
+            keep_files: false
