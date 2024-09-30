@@ -23,7 +23,7 @@ jobs:
         run: |
           mkdir -p build
           export TEXINPUTS=".:${PWD}/latex_common//:${TEXINPUTS}:"
-          find . -name "*.tex" -execdir latexmk -pdf -output-directory=build {} \;
+          find . -name "*.tex" -execdir latexmk -pdf -output-directory="$PWD/build" {} \;
 
       - name: Upload PDF as Artifact
         uses: actions/upload-artifact@v4
