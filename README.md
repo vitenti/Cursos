@@ -11,7 +11,8 @@ Sinta-se à vontade para contribuir criando **issues** ou participando das
 **discussions** caso tenha dúvidas ou sugestões sobre o material.
 
 ## Links para os PDFs
-Os PDFs podem ser baixados diretamente de [PDFs](https://vitenti.github.io/Cursos/).
+
+**Você pode acessar as notas de aula, provas e listas de exercícios em PDF diretamente [neste link](https://vitenti.github.io/Cursos/).**
 
 # Aviso
 
