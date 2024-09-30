@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install TeX Live
         run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-science texlive-fonts-recommended texlive-fonts-extra texlive-lang-portuguese latexmk
