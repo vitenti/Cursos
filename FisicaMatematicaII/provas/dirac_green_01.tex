@@ -1,0 +1,78 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Física Matemática II -- Delta de Dirac e Funções de Green}
+
+\begin{document}
+\begin{enumerate}
+	\item Considere a distribuição normal
+	      $p_\sigma(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-x^2/2\sigma^2}$, onde $\sigma>0$
+	      é o desvio padrão.
+	      \begin{enumerate}
+		      \item Mostre que a distribuição é normalizada, i.e,
+		            \begin{align}
+			            \int_{-\infty}^{\infty}p_\sigma(x)\dd x = 1.
+		            \end{align}
+		      \item Mostre que a integral tem o seguinte limite
+		            $$\lim_{\sigma\to0}\int_{-\infty}^{\infty}f(x)p_\sigma(x)\dd x =
+			            f(0).$$
+		            Ou seja, mostre que o limite da distribuição normal quando
+		            $\sigma\rightarrow 0$ é a função delta de Dirac.
+	      \end{enumerate}
+	\item Podemos construir a inversa da derivada de uma função $f(x)$ onde $x\in(a, b)$
+	      como
+	      \begin{align}
+		      f(x) = \int_{a}^{x}f'(y)\dd y,\qquad f(x) = \frac{\dd}{\dd x}\int_{a}^{x}f(y)\dd y.
+	      \end{align}
+	      onde $f(a) = 0 = f(b)$.
+	      \begin{enumerate}
+		      \item Mostre que podemos reescrever as expressões acima usando a
+		            função de Heaviside $\theta(x)$, i.e,
+		            \begin{align}
+			            \theta(x) = \begin{cases}
+				                        0, & x<0,     \\
+				                        1, & x\geq 0.
+			                        \end{cases}
+		            \end{align}
+		            Ou seja, a função de Heaviside é a função de Green para a derivada.
+		      \item Calcule a integral da função de Heaviside, i.e,
+		            \begin{align}
+			            G(x) \equiv \int_{a}^{x}\theta(y)\dd y.
+		            \end{align}
+		            e mostre que a integral da função de Heaviside é a função de Green
+		            para a o operador derivada segunda:
+		            $$\frac{\dd^2}{\dd x^2}\int_{a}^{b}G(x-y)f(y)\dd y = f(x).$$
+		      \item Mostre também a relação inversa, i.e,
+		            \begin{align}
+			            f(x) = \int_{a}^{b}G(x-y)\frac{\dd^2}{\dd y^2}f(y)\dd y.
+		            \end{align}
+		      \item Escreva a função de Green em termos da distância $\sigma(x,y) = |x-y|$.
+	      \end{enumerate}
+	\item Função de Green do Laplaciano:
+	      \begin{enumerate}
+		      \item Mostre que o Laplaciano em três dimensões, i.e.,
+		            $$\vec\nabla^2 = \frac{\partial^2}{\partial x_1^2}+\frac{\partial^2}{\partial x_2^2}+\frac{\partial^2}{\partial x_3^2},$$
+		            atuando sobre $1/\sigma(\vec{x},\vec{y})$ é zero para todo $\vec{x}\neq\vec{y}$, i.e.,
+		            $$\vec\nabla^2\frac{1}{\sigma(\vec{x},\vec{y})} = 0.$$
+		      \item Regularize a função $1/\sigma(\vec{x},\vec{y})$ usando
+		            o parâmetro $\varepsilon>0$, i.e,
+		            $$G_\varepsilon(\vec{x},\vec{y}) = -\frac{1}{4\pi}\frac{1}{\sqrt{(x_1-y_1)^2+(x_2-y_2)^2+(x_3-y_3)^2+\varepsilon^2}}.$$
+		            Mostre que a integral do Laplaciano da função regularizada é um, i.e,
+		            $$\int_{\mathbb{R}^3}\vec\nabla^2G_\varepsilon(\vec{x},\vec{y})\dd^3\vec{x} = 1.$$
+	      \end{enumerate}
+	\item Faça a dedução das identidades de Green para o Laplaciano.
+	      \begin{enumerate}
+		      \item Deduza as identidades de Green:
+		            \begin{align}
+			            \oint_{\partial\Omega}\phi\vec\nabla\psi\cdot\dd\vec{S}                                 & =
+			            \int_{\Omega}\left(\vec\nabla\phi\cdot\vec\nabla\psi+\phi\vec\nabla^2\psi\right)\dd^3\vec{x}, \\
+			            \oint_{\partial\Omega}\left(\phi\vec\nabla\psi-\psi\vec\nabla\phi\right)\cdot\dd\vec{S} & =
+			            \int_{\Omega}\left(\phi\vec\nabla^2\psi-\psi\vec\nabla^2\phi\right)\dd^3\vec{x}.
+		            \end{align}
+		            onde $\Omega$ é um volume limitado por uma superfície $\partial\Omega$.
+		      \item Mostre como combinar a segunda identidade de Green com a função de
+		            Green do Laplaciano para obter a solução da equação de Poisson.
+	      \end{enumerate}
+\end{enumerate}
+\end{document}
