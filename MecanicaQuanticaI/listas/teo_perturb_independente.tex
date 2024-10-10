@@ -1,0 +1,48 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica I -- Teoria de Perturbação Independente do Tempo}	
+
+\begin{document}
+
+Considere um sistema cuja Hamiltoniana é dada por
+\begin{equation*}
+      \hat{H} = \hat{H}^0 + \hat{H}^1,
+\end{equation*}
+onde $\hat{H}^0$ é a Hamiltoniana de um sistema cujas soluções são conhecidas,
+$\hat{H}^1$ é uma perturbação fraca. A teoria de
+perturbação independente do tempo visa determinar as correções nas energias e nas
+funções de onda do sistema não perturbado. Em outras palavras, buscamos expressar essas
+correções em termos dos autoestados de $\hat{H}^0$, que formam uma base completa
+$\{\ket{n^0}\}$. Suponhamos que os autoestados sejam não degenerados, isto é:
+\begin{equation*}
+      \hat{H}^0\ket{n^0} = E_n^0\ket{n^0},\quad E^0_n \neq E^0_m \iff n \neq m.
+\end{equation*}
+
+Podemos supor que a diferença entre o autoestado de $\hat{H}$ e o autoestado
+de $\hat{H}^0$ é pequena, isto é:
+\begin{equation*}
+      \ket{n} = \ket{n^0} + \ket{n^1} + \dots,
+\end{equation*}
+onde $\ket{n^1}$ é uma correção de primeira ordem. Analogamente, a energia
+total do sistema é dada por
+\begin{equation*}
+      E_n = E_n^0 + E_n^1 + \dots.
+\end{equation*}
+\begin{enumerate}
+      \item Como podemos formalizar as hipóteses acima? Em particular,
+            explique como $\ket{n^1}$ pode ser compreendido em
+            termos de uma série de potências.
+      \item Mostre que a correção de primeira ordem na energia é dada por
+            \begin{equation*}
+                  E_n^1 = \bra{n^0}\hat{H}^1\ket{n^0}.
+            \end{equation*}
+      \item Mostre que a correção de primeira ordem na função de onda é dada por
+            \begin{equation*}
+                  \ket{n^1} = i\alpha\ket{n^0} + \sum_{m\neq n}\frac{\bra{m^0}\hat{H}^1\ket{n^0}}{E_n^0 - E_m^0}\ket{m^0}.
+            \end{equation*}
+            onde $\alpha$ é um fator real a ser determinado.
+      \item Mostre como podemos remover a dependência de $\alpha$.
+\end{enumerate}
+\end{document}

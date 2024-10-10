@@ -1,0 +1,33 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica I -- Partícula na Caixa}	
+
+\begin{document}
+
+Considere a Hamiltoniana de uma partícula em uma caixa unidimensional:
+\begin{equation*}
+  H = \frac{p^2}{2m} + V(x),
+\end{equation*}
+onde $V(x) = 0$ para $|x| < L/2$ e $V(x) = V_0$ para $|x| \geq L/2$.
+\begin{enumerate}
+  \item Considere as três regiões do espaço:
+        \begin{enumerate}
+          \item[I] $x \leq -L/2$,
+          \item[II] $-L/2 < x < L/2$,
+          \item[III] $x \geq L/2$.
+        \end{enumerate}
+        Encontre as soluções da equação de Schrödinger independente do tempo em cada
+        região.
+  \item Nas regiões I e III, quais são as soluções que são normalizáveis? O que acontece
+        quando $V_0 \to \infty$?
+  \item Usando o resultado do item anterior, encontre as soluções da equação de
+        Schrödinger independente do tempo na região II. Mostre que as soluções são
+        combinações lineares de senos e cossenos.
+  \item Quais são os valores permitidos de $E$? Mostre que a energia é quantizada.
+  \item Qual é o menor valor de $E$? Qual é a função de onda correspondente? Qual é
+        a interpretação física?
+\end{enumerate}
+
+\end{document}
