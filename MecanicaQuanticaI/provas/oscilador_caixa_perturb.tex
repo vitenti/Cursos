@@ -1,0 +1,98 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica I -- Oscilador Harmônico, Partícula na Caixa e Teoria de Perturbações Independentes do Tempo}
+
+\begin{document}
+
+
+
+
+\begin{enumerate}
+    \item Considere a Hamiltoniana de um oscilador harmônico unidimensional:
+          \begin{equation*}
+              \hat{H} = \frac{\hat{p}^2}{2m} + \frac{1}{2}m\omega^2\hat{x}^2,
+          \end{equation*}
+          Definindo $\hat{\vec{v}} \equiv \begin{pmatrix} \hat{x} \\
+                  \hat{p}\end{pmatrix}$ e estendendo o produto interno para operadores,
+          $$\left(\hat{\vec{v}}_{c1}, \vec{v}_{c2}\right) \equiv
+              \frac{1}{i\hbar}W(\hat{\vec{v}}_{c1}^\dagger, \vec{v}_{c2}),$$ onde
+          $\hat{\vec{v}}_{c1}$ é um operador par de operadores e $\hat{\vec{v}}_{c2}$ é
+          uma solução complexa. Mostre que:
+          \begin{enumerate}
+              \item Dado o operador $$\hat{a} \equiv \left(\hat{\vec{v}}, \vec{v}_c\right) =
+                        \frac{\hat{x}p_c - \hat{p}x_c}{i\hbar}.$$
+                    Mostre que seu adjunto é dado por
+                    \begin{equation*}
+                        \hat{a}^\dagger = -\frac{W(\hat{\vec{v}},\vec{v}_c^*)}{i\hbar} =
+                        -\frac{\hat{x}p_c^* - \hat{p}x_c^*}{i\hbar}.
+                    \end{equation*}
+                    Mostre também que o comutador entre $\hat{a}$ e $\hat{a}^\dagger$ é dado por
+                    \begin{equation*}
+                        [\hat{a}, \hat{a}^\dagger] =
+                        \left(\vec{v}_c, \vec{v}_c\right) = \frac{2m\omega}{\hbar}\left(A^*A - B^*B\right).
+                    \end{equation*}
+                    Para impor a comutação canônica, escolhemos $\left(\vec{v}_c, \vec{v}_c\right)=1$.
+              \item Mostre que o operador $\hat{N} \equiv \hat{a}^\dagger\hat{a}$ é
+                    auto-adjunto e que seu espectro é não negativo.
+              \item Dado um autoestado de $\hat{N}$, denotado por $\ket{n}$, demonstre que o operador de aniquilação $\hat{a}$ satisfaz a relação:
+                    $$
+                        \hat{a}\ket{n} = \sqrt{n}\ket{n-1}.
+                    $$
+                    Discuta também a convenção de fase adotada.
+                    Em seguida, mostre que o operador de criação $\hat{a}^\dagger$ age da seguinte forma sobre o estado $\ket{n}$:
+                    $$
+                        \hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1}.
+                    $$
+                    Por fim, verifique que o número de ocupação $\hat{N}$ atua sobre o estado $\ket{n}$ da seguinte maneira:
+                    $$
+                        \hat{N}\ket{n} = n\ket{n},
+                    $$
+                    onde $n$ é um número inteiro não negativo.
+          \end{enumerate}
+    \item Considere a Hamiltoniana de uma partícula em uma caixa unidimensional:
+          \begin{equation*}
+              H = \frac{p^2}{2m} + V(x),
+          \end{equation*}
+          onde $V(x) = 0$ para $|x| < L/2$ e $V(x) = V_0$ para $|x| \geq L/2$.
+          \begin{enumerate}
+              \item Considere as três regiões do espaço:
+                    \begin{enumerate}
+                        \item[I] $x \leq -L/2$,
+                        \item[II] $-L/2 < x < L/2$,
+                        \item[III] $x \geq L/2$.
+                    \end{enumerate}
+                    Encontre as soluções da equação de Schrödinger independente do tempo em cada
+                    região.
+              \item No limite $V_0\to\infty$, quais são os valores permitidos de $E$? Mostre que a energia é quantizada.
+          \end{enumerate}
+    \item Considere um sistema cuja Hamiltoniana é dada por
+          \begin{equation*}
+              \hat{H} = \hat{H}^0 + \hat{H}^1,
+          \end{equation*}
+          onde $\hat{H}^0$ é a Hamiltoniana de um sistema cujas soluções são conhecidas,
+          $\hat{H}^1$ é uma perturbação fraca.  Suponhamos que os autoestados de
+          $\hat{H}^0$ sejam não degenerados, isto é:
+          \begin{equation*}
+              \hat{H}^0\ket{n^0} = E_n^0\ket{n^0},\quad E^0_n \neq E^0_m \iff n \neq m.
+          \end{equation*}
+          Os autoestados de $\hat{H}$ e as energias do sistema perturbado, i.e.,
+          $\hat{H}\ket{n}=E_n\ket{n}$ podem ser escritos na forma $\ket{n} = \ket{n^0} +
+              \ket{n^1} + \dots$ e $E_n = E_n^0 + E_n^1 + \dots$.
+          Faça as seguintes questões:
+          \begin{enumerate}
+              \item Mostre que a correção de primeira ordem na energia é dada por
+                    \begin{equation*}
+                        E_n^1 = \bra{n^0}\hat{H}^1\ket{n^0}.
+                    \end{equation*}
+              \item Mostre que a correção de primeira ordem na função de onda é dada por
+                    \begin{equation*}
+                        \ket{n^1} = \sum_{m\neq n}\frac{\bra{m^0}\hat{H}^1\ket{n^0}}{E_n^0 - E_m^0}\ket{m^0}.
+                    \end{equation*}
+                    onde a uma escolha de fase foi feita.
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}

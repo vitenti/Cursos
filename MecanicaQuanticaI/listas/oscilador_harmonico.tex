@@ -2,105 +2,105 @@
 \useseminartrue
 \input{../../latex_common/header.tex.frag}
 
-\title{Mecânica Quântica I -- Oscilador Harmônico}	
+\title{Mecânica Quântica I -- Oscilador Harmônico}
 
 \begin{document}
 
 Considere a Hamiltoniana de um oscilador harmônico unidimensional:
 \begin{equation*}
-  H = \frac{p^2}{2m} + \frac{1}{2}m\omega^2x^2,
+    H = \frac{p^2}{2m} + \frac{1}{2}m\omega^2x^2,
 \end{equation*}
 \begin{enumerate}
-  \item Solução Clássica:
-        \begin{enumerate}
-          \item Encontre as equações de movimento para $x$ e $p$.
-          \item Definindo um vetor no espaço de fase $\vec{v} = \begin{pmatrix} x \\ p
-                  \end{pmatrix}$, mostre que duas soluções tem Wronskiano constante,
-                \begin{equation*}
-                  W(\vec{v}_1, \vec{v}_2) = \frac{1}{m\omega}\left(x_1p_2 - x_2p_1\right),
-                  \qquad \frac{\dd}{\dd t} W(\vec{v}_1, \vec{v}_2) = 0,
-                \end{equation*}
-                onde $\vec{v}_1 = \begin{pmatrix} x_1 \\ p_1 \end{pmatrix}$ e $\vec{v}_2 =
-                  \begin{pmatrix} x_2 \\ p_2 \end{pmatrix}$.
-          \item Mostre que duas soluções são linearmente independentes se $W(\vec{v}_1,
-                  \vec{v}_2) \neq 0$.
-        \end{enumerate}
-  \item Complexificando o espaço de fase, $\vec{v}_c = \vec{v}_1 + i\vec{v}_2 =
-          \begin{pmatrix} x_c \\ p_c \end{pmatrix}$, mostre que:
-        \begin{enumerate}
-          \item O Wronskiano de uma solução com sua conjugada é dado por
-                \begin{equation*}
-                  W(\vec{v}_c^*, \vec{v}_c) = 2iW(\vec{v}_1, \vec{v}_2).
-                \end{equation*}
-                Ou seja, o Wronskiano de uma solução com sua conjugada é puramente
-                imaginário e diferente de zero se as partes reais e imaginárias forem
-                linearmente independentes.
-          \item Mostre que a solução geral pode ser escrita como
-                \begin{equation*}
-                  \vec{v}_c(t) = \begin{pmatrix} A \exp(i\omega t) + B \exp(-i\omega t) \\
-                    im\omega \left[A \exp(i\omega t) - B \exp(-i\omega t)\right]\end{pmatrix},
-                \end{equation*}
-          \item Demonstre que o Wronskiano da solução geral é dado por
-                \begin{equation*}
-                  W(\vec{v}_c^*, \vec{v}_c) = 2im\omega\left(A^*A - B^*B\right).
-                \end{equation*}
-                Mostre que o Wronskiano é invariante por transformações de fase
-                na solução geral. Discuta o que isso significa.
-          \item Note que o Wronskiano é puramente imaginário e tem unidade de ação. Mostre que o produto
-                $$\left(\vec{v}_{c1}, \vec{v}_{c2}\right) \equiv \frac{1}{i\hbar}W(\vec{v}_{c1}^*, \vec{v}_{c2}),$$
-                satisfaz todos os axiomas de um produto interno, exceto a positividade.
-        \end{enumerate}
-  \item Solução Quântica: Definindo $\hat{\vec{v}} \equiv \begin{pmatrix} \hat{x} \\
-            \hat{p}\end{pmatrix}$ e estendendo o produto interno para operadores,
-        $$\left(\hat{\vec{v}}_{c1}, \vec{v}_{c2}\right) \equiv
-          \frac{1}{i\hbar}W(\hat{\vec{v}}_{c1}^\dagger, \vec{v}_{c2}),$$ onde
-        $\hat{\vec{v}}_{c1}$ é um operador par de operadores e $\hat{\vec{v}}_{c2}$ é
-        uma solução complexa. Mostre que:
-        \begin{enumerate}
-          \item Dado o operador $$\hat{a} \equiv \left(\hat{\vec{v}}, \vec{v}_c\right) =
-                  \frac{\hat{x}p_c - \hat{p}x_c}{i\hbar}.$$
-                Mostre que seu adjunto é dado por
-                \begin{equation*}
-                  \hat{a}^\dagger = -\frac{W(\hat{\vec{v}},\vec{v}_c^*)}{i\hbar} =
-                  -\frac{\hat{x}p_c^* - \hat{p}x_c^*}{i\hbar}.
-                \end{equation*}
-                Mostre também que o comutador entre $\hat{a}$ e $\hat{a}^\dagger$ é dado por
-                \begin{equation*}
-                  [\hat{a}, \hat{a}^\dagger] =
-                  \left(\vec{v}_c, \vec{v}_c\right) = \frac{2m\omega}{\hbar}\left(A^*A - B^*B\right).
-                \end{equation*}
-                Para impor a comutação canônica, escolhemos $\left(\vec{v}_c, \vec{v}_c\right)=1$.
-          \item Mostre que o operador $\hat{N} \equiv \hat{a}^\dagger\hat{a}$ é
-                auto-adjunto e que seu espectro é não negativo.
-          \item Dado um auto-estado de $\hat{N}$, $\ket{n}$, mostre que
-                \begin{equation*}
-                  \hat{N}\ket{n} = n\ket{n},
-                \end{equation*}
-                onde $n$ é um número inteiro não negativo.
-          \item Mostre que o operador $\hat{a}$ é aniquilador, isto é,
-                $\hat{a}\ket{n} = \sqrt{n}\ket{n-1}$. Discuta a escolha de fase.
-          \item Mostre que o operador $\hat{a}^\dagger$ é criador, isto é,
-                $\hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1}$.
-        \end{enumerate}
-  \item Escolha de representação:
-        \begin{enumerate}
-          \item Calcule os seguintes comutadores:
-                $$[\hat{a}, \hat{x}] = x_c,\qquad [\hat{a}, \hat{p}] = p_c, \qquad
-                  [\hat{a}, \hat{x}^n] = nx_c\hat{x}^{n-1}, \qquad [\hat{a}, \hat{p}^n] = np_c\hat{p}^{n-1}.$$
-          \item Usando os comutadores acima mostre que
-                $$[\hat{a},\hat{H}] = \frac{p_c\hat{p}}{m}+m\omega^2x_c\hat{x}.$$
-          \item Para termos um operador aniquilador compatível com a Hamiltoniana,
-                precisamos que o comutador $[\hat{a},\hat{H}]$ seja proporcional a
-                $\hat{a}$. Em outras palavras, precisamos que
-                $$[\hat{a}, [\hat{a},\hat{H}]] = 0.$$
-          \item Use a relação acima para mostrar que
-                $$|p_c| = m\omega|x_c|,\qquad \theta_p - \theta_x = \pi\left(n+\frac{1}{2}\right),
-                  \quad \forall n \in \mathbb{Z},$$
-                onde $x_c = |x_c|\exp(i\theta_x)$ e $p_c = |p_c|\exp(i\theta_p)$.
-          \item Usando a normalização $\left(\vec{v}_c, \vec{v}_c\right) = 1$, mostre que
-                $$|x_c|^2 = \frac{\hbar}{2m\omega},\qquad |p_c|^2 = \frac{m\omega\hbar}{2}.$$
-          \item Finalmente, fazendo a escolha de fase $\theta_x = 0$ e $n=0$, mostre que
-                $$x_c = \sqrt{\frac{\hbar}{2m\omega}},\qquad p_c = i\sqrt{\frac{m\omega\hbar}{2}}.$$
-        \end{enumerate}
+    \item Solução Clássica:
+          \begin{enumerate}
+              \item Encontre as equações de movimento para $x$ e $p$.
+              \item Definindo um vetor no espaço de fase $\vec{v} = \begin{pmatrix} x \\ p
+                        \end{pmatrix}$, mostre que duas soluções tem Wronskiano constante,
+                    \begin{equation*}
+                        W(\vec{v}_1, \vec{v}_2) = \frac{1}{m\omega}\left(x_1p_2 - x_2p_1\right),
+                        \qquad \frac{\dd}{\dd t} W(\vec{v}_1, \vec{v}_2) = 0,
+                    \end{equation*}
+                    onde $\vec{v}_1 = \begin{pmatrix} x_1 \\ p_1 \end{pmatrix}$ e $\vec{v}_2 =
+                        \begin{pmatrix} x_2 \\ p_2 \end{pmatrix}$.
+              \item Mostre que duas soluções são linearmente independentes se $W(\vec{v}_1,
+                        \vec{v}_2) \neq 0$.
+          \end{enumerate}
+    \item Complexificando o espaço de fase, $\vec{v}_c = \vec{v}_1 + i\vec{v}_2 =
+              \begin{pmatrix} x_c \\ p_c \end{pmatrix}$, mostre que:
+          \begin{enumerate}
+              \item O Wronskiano de uma solução com sua conjugada é dado por
+                    \begin{equation*}
+                        W(\vec{v}_c^*, \vec{v}_c) = 2iW(\vec{v}_1, \vec{v}_2).
+                    \end{equation*}
+                    Ou seja, o Wronskiano de uma solução com sua conjugada é puramente
+                    imaginário e diferente de zero se as partes reais e imaginárias forem
+                    linearmente independentes.
+              \item Mostre que a solução geral pode ser escrita como
+                    \begin{equation*}
+                        \vec{v}_c(t) = \begin{pmatrix} A \exp(i\omega t) + B \exp(-i\omega t) \\
+                            im\omega \left[A \exp(i\omega t) - B \exp(-i\omega t)\right]\end{pmatrix},
+                    \end{equation*}
+              \item Demonstre que o Wronskiano da solução geral é dado por
+                    \begin{equation*}
+                        W(\vec{v}_c^*, \vec{v}_c) = 2im\omega\left(A^*A - B^*B\right).
+                    \end{equation*}
+                    Mostre que o Wronskiano é invariante por transformações de fase
+                    na solução geral. Discuta o que isso significa.
+              \item Note que o Wronskiano é puramente imaginário e tem unidade de ação. Mostre que o produto
+                    $$\left(\vec{v}_{c1}, \vec{v}_{c2}\right) \equiv \frac{1}{i\hbar}W(\vec{v}_{c1}^*, \vec{v}_{c2}),$$
+                    satisfaz todos os axiomas de um produto interno, exceto a positividade.
+          \end{enumerate}
+    \item Solução Quântica: Definindo $\hat{\vec{v}} \equiv \begin{pmatrix} \hat{x} \\
+                  \hat{p}\end{pmatrix}$ e estendendo o produto interno para operadores,
+          $$\left(\hat{\vec{v}}_{c1}, \vec{v}_{c2}\right) \equiv
+              \frac{1}{i\hbar}W(\hat{\vec{v}}_{c1}^\dagger, \vec{v}_{c2}),$$ onde
+          $\hat{\vec{v}}_{c1}$ é um operador par de operadores e $\hat{\vec{v}}_{c2}$ é
+          uma solução complexa. Mostre que:
+          \begin{enumerate}
+              \item Dado o operador $$\hat{a} \equiv \left(\hat{\vec{v}}, \vec{v}_c\right) =
+                        \frac{\hat{x}p_c - \hat{p}x_c}{i\hbar}.$$
+                    Mostre que seu adjunto é dado por
+                    \begin{equation*}
+                        \hat{a}^\dagger = -\frac{W(\hat{\vec{v}},\vec{v}_c^*)}{i\hbar} =
+                        -\frac{\hat{x}p_c^* - \hat{p}x_c^*}{i\hbar}.
+                    \end{equation*}
+                    Mostre também que o comutador entre $\hat{a}$ e $\hat{a}^\dagger$ é dado por
+                    \begin{equation*}
+                        [\hat{a}, \hat{a}^\dagger] =
+                        \left(\vec{v}_c, \vec{v}_c\right) = \frac{2m\omega}{\hbar}\left(A^*A - B^*B\right).
+                    \end{equation*}
+                    Para impor a comutação canônica, escolhemos $\left(\vec{v}_c, \vec{v}_c\right)=1$.
+              \item Mostre que o operador $\hat{N} \equiv \hat{a}^\dagger\hat{a}$ é
+                    auto-adjunto e que seu espectro é não negativo.
+              \item Dado um auto-estado de $\hat{N}$, $\ket{n}$, mostre que
+                    \begin{equation*}
+                        \hat{N}\ket{n} = n\ket{n},
+                    \end{equation*}
+                    onde $n$ é um número inteiro não negativo.
+              \item Mostre que o operador $\hat{a}$ é aniquilador, isto é,
+                    $\hat{a}\ket{n} = \sqrt{n}\ket{n-1}$. Discuta a escolha de fase.
+              \item Mostre que o operador $\hat{a}^\dagger$ é criador, isto é,
+                    $\hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1}$.
+          \end{enumerate}
+    \item Escolha de representação:
+          \begin{enumerate}
+              \item Calcule os seguintes comutadores:
+                    $$[\hat{a}, \hat{x}] = x_c,\qquad [\hat{a}, \hat{p}] = p_c, \qquad
+                        [\hat{a}, \hat{x}^n] = nx_c\hat{x}^{n-1}, \qquad [\hat{a}, \hat{p}^n] = np_c\hat{p}^{n-1}.$$
+              \item Usando os comutadores acima mostre que
+                    $$[\hat{a},\hat{H}] = \frac{p_c\hat{p}}{m}+m\omega^2x_c\hat{x}.$$
+              \item Para termos um operador aniquilador compatível com a Hamiltoniana,
+                    precisamos que o comutador $[\hat{a},\hat{H}]$ seja proporcional a
+                    $\hat{a}$. Em outras palavras, precisamos que
+                    $$[\hat{a}, [\hat{a},\hat{H}]] = 0.$$
+              \item Use a relação acima para mostrar que
+                    $$|p_c| = m\omega|x_c|,\qquad \theta_p - \theta_x = \pi\left(n+\frac{1}{2}\right),
+                        \quad \forall n \in \mathbb{Z},$$
+                    onde $x_c = |x_c|\exp(i\theta_x)$ e $p_c = |p_c|\exp(i\theta_p)$.
+              \item Usando a normalização $\left(\vec{v}_c, \vec{v}_c\right) = 1$, mostre que
+                    $$|x_c|^2 = \frac{\hbar}{2m\omega},\qquad |p_c|^2 = \frac{m\omega\hbar}{2}.$$
+              \item Finalmente, fazendo a escolha de fase $\theta_x = 0$ e $n=0$, mostre que
+                    $$x_c = \sqrt{\frac{\hbar}{2m\omega}},\qquad p_c = i\sqrt{\frac{m\omega\hbar}{2}}.$$
+          \end{enumerate}
 \end{enumerate}
 \end{document}
