@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {section}{\numberline {1}Variedades}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Defini\IeC {\c c}\IeC {\~o}es}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Fibrado tangente}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Deriva\IeC {\c c}\IeC {\~o}es como vetores tangentes}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Campos vetoriais}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Comutador de campos}{2}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Fibrado cotangente}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Espa\IeC {\c c}o vetorial dual}{3}{subsection.4.1}%
