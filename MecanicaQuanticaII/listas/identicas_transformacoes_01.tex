@@ -1,0 +1,86 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Partículas Idênticas e Transformações}
+
+\begin{document}
+\begin{enumerate}
+	\item Considere um sistema de duas partículas {\bf idênticas} e responda às questões
+	      abaixo:
+	      \begin{enumerate}
+		      \item Considere que o estado de uma partícula é descrito por $\ket{a} \in
+			            \mathbb{V}$. Utilize o produto tensorial para definir os dois possíveis
+		            espaços para os estados de duas partículas.
+		      \item Definimos um estado separável de duas partículas como sendo da forma
+		            $\ket{\psi} = \ket{a}\otimes\ket{b}$. Os estados que não podem ser
+		            escritos dessa forma são chamados emaranhados. Os estados representando
+		            duas partículas idênticas podem ser separáveis? Justifique sua resposta.
+		      \item Com base nas respostas anteriores, explique como podemos realizar
+		            experimentos em laboratório para medir o estado de uma partícula
+		            $\ket{a}$ sem considerar todas as outras partículas idênticas presentes no
+		            sistema. Para tanto, considere dois estados $\ket{T}$ e $\ket{L}$
+		            representando pacotes gaussianos na Terra e na Lua, respectivamente, onde
+		            $$\braket{x|T} =
+			            \frac{1}{(2\pi)^{1/4}}\exp\left(-\frac{(x-\mu_T)^2}{4}\right),
+			            \qquad \braket{x|L} =
+			            \frac{1}{(2\pi)^{1/4}}\exp\left(-\frac{(x-\mu_L)^2}{4}\right),$$ com
+		            $\mu_L\gg\mu_T$. Demonstre que tanto o estado simétrico quanto o
+		            anti-simétrico de $\ket{L}$ e $\ket{T}$ são aproximadamente
+		            separáveis quando calculamos a função de onda do conjunto em $(x_L,
+			            x_T)$ onde $|x_T-\mu_L|\gg1$ e $|x_L-\mu_T|\gg1$.
+		      \item Explique como podemos testar empiricamente se o estado de duas
+		            partículas é simétrico ou anti-simétrico. Descreva como a simetria e a
+		            anti-simetria estão relacionadas ao conceito de troca de partículas
+		            idênticas e como as técnicas experimentais podem ser usadas para medir os
+		            estados de duas partículas e verificar sua simetria.
+	      \end{enumerate}
+	\item Considere um sistema uni-dimensional com uma partícula e respondas às
+	      questões abaixo:
+	      \begin{enumerate}
+		      \item Define o operador de translação $\hat{T}_\epsilon$ que desloca a
+		            função de onda de uma partícula de uma distância $\epsilon$. Use
+		            transformações ativas para definir o operador de translação.
+		      \item Mostre que o gerador do operador de translação é o operador momento
+		            linear $\hat{p}$.
+		      \item Discuta a liberdade de fase associada ao operador de translação e
+		            como ela está relacionada ao operador momento linear. Ou seja, se
+		            definimos $\hat{T}_\epsilon\ket{x} = e^{i\epsilon
+					            g(x)/\hbar}\ket{x+\epsilon}$, como podemos escolher $g(x)$ de forma
+		            a garantir que $\hat{T}^\dagger_\epsilon\hat{p}\hat{T}_\epsilon =
+			            \hat{p}$?
+	      \end{enumerate}
+	\item Em um sistema tridimensional com uma partícula, responda às questões sobre as
+	      transformações discretas abaixo:
+	      \begin{enumerate}
+		      \item Defina o operador de reflexão $\hat{R}_x$ que inverte a coordenada
+		            $x$. Use transformações ativas para definir o operador de reflexão.
+		      \item O operador paridade $\hat{P}$ inverte todas as coordenadas espaciais.
+		            Defina o operador paridade e mostre que ele é o produto de três operadores
+		            de reflexão. Mostre também que o operador de reflexão combinado com uma
+		            rotação de $\pi$ em torno de um eixo perpendicular ao plano de reflexão
+		            é equivalente ao operador paridade.
+		      \item Mostre que se a Hamiltoniana de um sistema é invariante sob rotações,
+		            então invariância sob reflexões implica invariância sob paridade.
+		      \item Encontre os autovalores e autovetores do operador de paridade para o
+		            caso de uma partícula em uma dimensão. Mostre que os autovalores são
+		            $\pm1$ e que os autovetores são funções pares e ímpares.
+	      \end{enumerate}
+	\item Inversão temporal é uma transformação que inverte o tempo. Considere um
+	      sistema com uma partícula e responda às questões abaixo:
+	      \begin{enumerate}
+		      \item Defina o operador de inversão temporal $\hat{T}$ que inverte o tempo.
+		            Usando a equação de Schrödinger para a função de onda de uma partícula,
+		            mostre que a inversão temporal requer que a
+		            função de onda seja transformada de acordo com
+		            $\psi(x,t)\rightarrow\hat{T}\psi(x,t)=\psi^*(x,-t)$.
+		      \item Usando o resultado acima, mostre que a inversão temporal transforma
+		            a Hamiltoniana na representação de posição de acordo com
+		            $\hat{T}^\dagger\hat{H}\hat{T} = \hat{H}^*$.
+		      \item Mostre que a inversão temporal é uma transformação unitária e que
+		            $\hat{T}^\dagger\hat{T} = \hat{I}$.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
