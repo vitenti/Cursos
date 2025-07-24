@@ -1,0 +1,85 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Prova: Funções de Green e Álgebra Geométrica}
+
+\newcommand{\e}{\mathsf{e}}
+
+\begin{document}
+
+Justifique todas as respostas. Sempre que possível, interprete fisicamente os resultados.
+
+\begin{enumerate}
+
+      \item Bivetores e Boosts
+
+            \begin{enumerate}
+                  \item Calcule o quadrado dos seguintes bivetores e classifique cada um
+                        como tipo-tempo, tipo-espaço ou nulo:
+                        $$(\e^0 \wedge \e^1)^2, \quad (\e^1 \wedge \e^2)^2, \quad (\e^0 \wedge \e^2)^2.$$
+
+                  \item Considere o bivetor $B = \e^0 \wedge \e^1$ e o rotor $R =
+                              e^{\eta B/2}$, com parâmetro de rapidez $\eta$. Mostre que a
+                        transformação
+                        $$u \mapsto R u R^\mathrm{T},$$ onde $R^\mathrm{T} = e^{-\eta
+                                          B/2}$, corresponde a um boost de Lorentz ao longo da
+                        direção $x^1$ para um vetor qualquer $u = u^\mu \e_\mu$.
+                        Interprete o resultado.
+                  \item Mostre que se $B = \e^1 \wedge \e^2$ e $R = e^{\theta B/2}$, então
+                        $$u \mapsto R u R^\mathrm{T}$$ corresponde a uma rotação de
+                        $\theta$ radianos em torno do eixo $\e^3$.
+            \end{enumerate}
+
+      \item Pseudoscalar e Dualidade
+
+            \begin{enumerate}
+                  \item Mostre que o pseudoscalar $I=\e^0 \wedge \e^1 \wedge \e^2 \wedge
+                              \e^3$ anti-comuta com cada vetor base, ou seja,
+                        $$I \e^\mu = - \e^\mu I, \quad \mu = 0,1,2,3.$$
+
+                  \item Usando o pseudoscalar, calcule o dual do bivetor $B = \e^1
+                              \wedge \e^2$ ou seja $IB$ e interprete o significado
+                        geométrico desse dual.
+            \end{enumerate}
+
+      \item Projeções e Componentes Temporais
+
+            \begin{enumerate}
+                  \item Mostre que a componente temporal de $x = x^\mu \e_\mu$ em
+                        relação a $w = \e_0$ pode ser recuperada por
+                        $$ct = - x \cdot w.$$
+
+                  \item Defina a projeção espacial ortogonal a $w$ por
+                        $$x_\perp = \frac{x + w x w}{2}$$
+                        e prove que
+                        $$x_\perp \cdot w = 0,\qquad\text{e}\quad wx_\perp = -x_\perp w.$$
+            \end{enumerate}
+
+      \item Equação da Onda e Função de Green
+
+            \begin{enumerate}
+                  \item Defina a função de Green $G(t, \vec{x}; t', \vec{x}')$ associada
+                        à equação da onda
+                        $$\Box \phi(t, \vec{x}) = \rho(t, \vec{x}),$$
+                        onde
+                        $$\Box = -\frac{1}{c^2} \frac{\partial^2}{\partial t^2} + \nabla^2,$$
+                        e explique sua interpretação física, destacando as condições de causalidade para as funções de Green retardada e avançada.
+
+                  \item A função de Green retardada em 3 dimensões espaciais pode ser expressa como
+                        $$
+                              G_{\mathrm{ret}}(ct - ct', \vec{x} - \vec{x}') =
+                              \frac{\delta\left(ct - ct' - |\vec{x} - \vec{x}'|\right)}{4\pi |\vec{x} - \vec{x}'|}.
+                        $$
+                        Explique o significado físico do suporte desta função estar limitado à superfície do cone de luz.
+
+                  \item Calcule
+                        $$
+                              \phi(t,\vec{x}) = \int G_{\mathrm{ret}}(t, \vec{x}; t', \vec{x}') \, \delta^3(\vec{x} - \vec{x}') \, \dd t' \dd^3 \vec{x}',
+                        $$
+                        e explique o significado físico desse resultado.
+            \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
