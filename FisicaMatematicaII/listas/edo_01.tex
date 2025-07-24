@@ -1,0 +1,63 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Lista de Física Matemática II -- EDO}
+
+\begin{document}
+\begin{enumerate}
+	\item Em quais situações é apropriado calcular soluções usando séries de Taylor, e em quais casos é necessário recorrer ao método de Frobenius? Dê exemplos para ilustrar cada situação, incluindo casos em que o método de Frobenius não pode ser aplicado.
+	\item Considere a equação:
+	      $$y'' + P_1(x)y' + P_0(x)y = 0.$$
+	      Mostre que, se $P_1(x)$ e $P_0(x)$ são funções analíticas em $x = x_0$, então $x_0$ é um ponto ordinário da equação e existem duas soluções linearmente independentes representáveis por séries de potências convergentes em torno de $x_0$.
+	\item Considere a equação diferencial linear de segunda ordem:
+	      $$y'' + P_1(x)y' + P_0(x)y = 0.$$
+	      Suponha que $x_0$ é um ponto singular regular. Podemos reescrever a equação na forma:
+	      $$y'' + \frac{p(x)}{(x - x_0)}y' + \frac{q(x)}{(x - x_0)^2}y = 0,$$
+	      onde $p(x) = (x - x_0)P_1(x)$ e $q(x) = (x - x_0)^2P_0(x)$ são funções analíticas em $x = x_0$. Com isso:
+	      \begin{enumerate}
+		      \item Determine o polinômio indicial e suas raízes a partir da forma de Frobenius.
+		      \item Encontre a solução geral para a série de potências e derive a fórmula de recorrência.
+		      \item Liste e explique os métodos disponíveis para encontrar a segunda solução.
+	      \end{enumerate}
+
+	\item Considere a equação de Bessel:
+	      \[x^2y'' + xy' + (x^2 - \nu^2)y = 0.\]
+	      \begin{enumerate}
+		      \item Classifique o ponto $x_0 = 0$ e encontre a primeira solução usando o método de Frobenius.
+		      \item Analise o tipo da segunda solução nos seguintes casos:
+		            \begin{enumerate}
+			            \item $\nu \in \mathbb{Z}$
+			            \item $\nu \in \mathbb{Z} + \tfrac{1}{2}$
+			            \item $2\nu \notin \mathbb{Z}$
+		            \end{enumerate}
+	      \end{enumerate}
+
+	\item Considere a equação de Legendre:
+	      \[(1 - x^2)y'' - 2xy' + \lambda(\lambda + 1)y = 0,\]
+	      definida para $x \in [-1,1]$. Resolva a equação em um dos pontos singulares regulares usando o método de Frobenius e encontre duas soluções linearmente independentes. Em seguida:
+	      \begin{enumerate}
+		      \item O que ocorre nos pontos singulares regulares se $\lambda$ não for um número inteiro?
+		      \item Quais são as condições sobre $\lambda$ para garantir que as soluções sejam finitas em $x \in [-1,1]$?
+	      \end{enumerate}
+
+	      % NOVOS EXERCÍCIOS:
+
+	\item Classifique os pontos indicados como ordinários, singulares regulares ou singulares irregulares para as seguintes equações diferenciais:
+	      \begin{enumerate}
+		      \item $x(x-1)y'' + (x-1)y' + y = 0$, em $x = 0$, $x = 1$
+		      \item $x^2 y'' + e^x y' + \ln(x) y = 0$, em $x = 0$
+		      \item $(x^2 + 1)y'' + \frac{1}{x}y' + \tan(x)y = 0$, em $x = 0$
+		      \item $(x-2)^2 y'' + \frac{1}{x-2} y' + \sin(x)y = 0$, em $x = 2$
+	      \end{enumerate}
+	      Justifique em cada caso com base na definição de ponto ordinário e dos tipos de singularidade.
+
+	\item Use o método de Frobenius para encontrar a forma da solução geral em torno de $x = 0$ das seguintes equações, determinando o polinômio indicial e a fórmula de recorrência:
+	      \begin{enumerate}
+		      \item $x^2 y'' + 3x y' + (x^2 - 1)y = 0$
+		      \item $x^2 y'' + x y' - y = 0$
+		      \item $x^2 y'' + 2x y' + \left(x^2 - \frac{1}{4}\right)y = 0$
+	      \end{enumerate}
+	      Discuta a existência de uma segunda solução independente e a possível ocorrência de logaritmos.
+\end{enumerate}
+\end{document}

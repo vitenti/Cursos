@@ -1,0 +1,93 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- Funções de Green}
+
+\begin{document}
+
+Responda todas as questões. Justifique todos os passos e cálculos. A prova contém 4
+questões principais com um total de 10 subitens.
+
+\begin{enumerate}
+	\item Considere
+	      $$
+		      p_\sigma(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-x^2 / (2\sigma^2)}
+	      $$
+	      a distribuição normal.
+
+	      \begin{itemize}
+		      \item[(a)] Mostre que $p_\sigma(x)$ é normalizada:
+		            $$
+			            \int_{-\infty}^{\infty} p_\sigma(x)\,\mathrm{d}x = 1.
+		            $$
+
+		      \item[(b)] Calcule o valor esperado das potências ímpares:
+		            $$
+			            \left\langle x^{2n+1} \right\rangle = \int_{-\infty}^{\infty} x^{2n+1} p_\sigma(x)\,\mathrm{d}x.
+		            $$
+
+		      \item[(c)] Mostre que para uma função suave $f(x)$, vale o desenvolvimento:
+		            $$
+			            \int_{-\infty}^{\infty} f(x) p_\sigma(x)\,\mathrm{d}x =
+			            f(0) + \frac{\sigma^2}{2} f''(0) + \frac{\sigma^4}{8} f^{(4)}(0) + \cdots
+		            $$
+		            O que isso implica no limite $\sigma \to 0$?
+	      \end{itemize}
+	\item Considere o operador $\hat{L} = -\dfrac{\mathrm{d}^2}{\mathrm{d}x^2}$ definido no intervalo $(a, b)$, com condições de contorno homogêneas $\phi(a) = \phi(b) = 0$.
+
+	      \begin{enumerate}
+		      \item Mostre que:
+		            $$
+			            \int_a^b \left[\phi(x) \frac{\mathrm{d}^2\psi}{\mathrm{d}x^2}(x) -
+				            \psi(x) \frac{\mathrm{d}^2\phi}{\mathrm{d}x^2}(x)\right]\,\mathrm{d}x = 0
+		            $$
+		            e explique como essa identidade pode ser obtida a partir de uma integração por partes adequada.
+
+		      \item Usando agora que $\psi(x) = G(x, y) = {|x - y|}/{2} + \alpha(x - y)
+			            + \beta$ é a função de Green do operador. Use a identidade acima
+		            para obter a solução formal da equação
+		            $$
+			            - \frac{\mathrm{d}^2}{\mathrm{d}x^2} f(x) = s(x)
+		            $$
+		            com condições de contorno homogêneas $G(a, y) = G(b, y) = 0$, na forma:
+		            $$
+			            f(x) = \int_a^b G(x, y)\, s(y)\, \mathrm{d}y.
+		            $$
+	      \end{enumerate}
+	\item Considere a distância $|\vec{x} - \vec{y}|$ em $\mathbb{R}^3$.
+	      \begin{itemize}
+		      \item[(a)] Mostre que o Laplaciano satisfaz:
+		            $$
+			            \nabla^2 \left( \frac{1}{|\vec{x} - \vec{y}|} \right) = 0 \quad \text{para } \vec{x} \neq \vec{y}.
+		            $$
+
+		      \item[(b)] Regularize a função de Green como
+		            $$
+			            G_\varepsilon(\vec{x}, \vec{y}) = -\frac{1}{4\pi} \frac{1}{\sqrt{|\vec{x} - \vec{y}|^2 + \varepsilon^2}},
+		            $$
+		            e mostre que
+		            $$
+			            \lim_{\varepsilon \to 0} \int_{\mathbb{R}^3} \nabla^2 G_\varepsilon(\vec{x}, \vec{y}) \, \mathrm{d}^3 \vec{x} = 1.
+		            $$
+	      \end{itemize}
+	\item A função de Green do operador de ondas satisfaz:
+	      $$
+		      \Box G(t - t', \vec{x} - \vec{x}') = \delta(t - t') \delta^3(\vec{x} - \vec{x}').
+	      $$
+
+	      \begin{itemize}
+		      \item[(a)] Escreva a representação de Fourier da função de Green e derive a expressão de $\tilde{G}(\omega, \vec{k})$.
+
+		      \item[(b)] Resolva a integral para a \textbf{função de Green retardada} no plano $\omega$ usando integração por contorno. Qual condição o contorno deve satisfazer?
+
+		      \item[(c)] Usando o resultado, mostre que
+		            $$
+			            G_{\text{ret}}(t - t', \vec{x} - \vec{x}') = \frac{\delta(t - t' - |\vec{x} - \vec{x}'|/c)}{4\pi |\vec{x} - \vec{x}'|}.
+		            $$
+		            Interprete o suporte dessa função e sua conexão com a causalidade.
+	      \end{itemize}
+\end{enumerate}
+
+
+\end{document}

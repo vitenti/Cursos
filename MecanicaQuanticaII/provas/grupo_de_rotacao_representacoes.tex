@@ -1,0 +1,112 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Momento Angular, Álgebra de Lie e Spin}
+
+\begin{document}
+\begin{enumerate}
+	\item Considere os operadores de momento angular em mecânica quântica e responda às
+	      questões abaixo:
+	      \begin{enumerate}
+		      \item Defina os operadores de momento angular $\hat{L}_x$, $\hat{L}_y$
+		            e $\hat{L}_z$ em termos dos operadores de posição $\hat{x}$,
+		            $\hat{y}$, $\hat{z}$ e momento $\hat{p}_x$, $\hat{p}_y$,
+		            $\hat{p}_z$.
+		      \item Mostre que os operadores de momento angular satisfazem a relação de
+		            comutação:
+		            $$
+			            [\hat{L}_i, \hat{L}_j] = i\hbar \sum_{k=1}^3\epsilon_{ijk} \hat{L}_k,
+		            $$
+		            onde $\epsilon_{ijk}$ é o símbolo de Levi-Civita.
+		      \item Explique o significado físico das relações de comutação acima e como
+		            elas estão relacionadas à álgebra de Lie do grupo de rotações
+		            $SO(3)$.
+	      \end{enumerate}
+
+	\item Considere a álgebra de Lie associada a um grupo de rotações generalizado,
+	      cujos geradores são denotados por $\hat{J}_x$, $\hat{J}_y$ e
+	      $\hat{J}_z$:
+	      \begin{enumerate}
+		      \item Mostre que os geradores $\hat{J}_i$ satisfazem a mesma relação de
+		            comutação:
+		            $$
+			            [\hat{J}_i, \hat{J}_j] = i\hbar \epsilon_{ijk} \hat{J}_k.
+		            $$
+		      \item Explique que, ao contrário dos operadores de momento angular orbital
+		            $\hat{L}_i$, os geradores $\hat{J}_i$ não estão necessariamente
+		            associados a coordenadas espaciais, mas podem representar
+		            transformações mais gerais em um espaço abstrato.
+		      \item Defina o operador $\hat{\mathbf{J}}^2 = \hat{J}_x^2 + \hat{J}_y^2 +
+			            \hat{J}_z^2$ e mostre que ele comuta com cada um dos geradores
+		            $\hat{J}_i$.
+		      \item Explique que estamos agora procurando representações arbitrárias da
+		            álgebra de Lie, que podem descrever sistemas físicos além do momento
+		            angular orbital, como o spin.
+	      \end{enumerate}
+
+	\item Considere as representações irredutíveis da álgebra de Lie generalizada:
+	      \begin{enumerate}
+		      \item Defina os operadores escada \(\hat{J}_+\) e \(\hat{J}_-\) como:
+		            \[
+			            \hat{J}_+ = \hat{J}_x + i\hat{J}_y, \quad \hat{J}_- = \hat{J}_x - i\hat{J}_y.
+		            \]
+		            Mostre que esses operadores satisfazem as seguintes relações de comutação:
+		            \[
+			            [\hat{J}_z, \hat{J}_\pm] = \pm\hbar \hat{J}_\pm, \quad [\hat{J}_+, \hat{J}_-] = 2\hbar \hat{J}_z.
+		            \]
+		      \item Considere um autoestado \(\ket{\lambda, m}\) de \(\hat{\mathbf{J}}^2\) e \(\hat{J}_z\), tal que:
+		            \[
+			            \hat{\mathbf{J}}^2 \ket{\lambda, m} = \lambda \ket{\lambda, m}, \quad \hat{J}_z \ket{\lambda, m} = m\hbar \ket{\lambda, m}.
+		            \]
+		            Usando os operadores escada, mostre que:
+		            \[
+			            \hat{J}_z (\hat{J}_\pm \ket{\lambda, m}) = (m \pm 1)\hbar (\hat{J}_\pm \ket{\lambda, m}).
+		            \]
+		            Conclua que \(\hat{J}_\pm\) atuam como operadores de levantamento e abaixamento, aumentando ou diminuindo o valor de \(m\) em uma unidade de \(\hbar\).
+		      \item Mostre que os autovalores de \(\hat{\mathbf{J}}^2\) e \(\hat{J}_z\) são limitados. Para isso, use a relação:
+		            \[
+			            \hat{\mathbf{J}}^2 = \hat{J}_z^2 + \frac{1}{2}(\hat{J}_+ \hat{J}_- + \hat{J}_- \hat{J}_+).
+		            \]
+		            Demonstre que:
+		            \[
+			            \lambda \geq m^2\hbar^2.
+		            \]
+		            Conclua que existe um valor máximo \(m_{\text{max}}\) e um valor mínimo \(m_{\text{min}}\) para \(m\), tais que:
+		            \[
+			            \hat{J}_+ \ket{\lambda, m_{\text{max}}} = 0, \quad \hat{J}_- \ket{\lambda, m_{\text{min}}} = 0.
+		            \]
+		      \item Usando as relações acima, mostre que os autovalores de \(\hat{\mathbf{J}}^2\) são dados por:
+		            \[
+			            \lambda = \hbar^2 j(j+1),
+		            \]
+		            onde \(j\) é um número inteiro ou semi-inteiro, e \(m\) assume valores no intervalo \(-j \leq m \leq j\).
+		      \item Defina os estados \(\ket{j, m}\) como autoestados simultâneos de \(\hat{\mathbf{J}}^2\) e \(\hat{J}_z\), com autovalores \(\hbar^2 j(j+1)\) e \(m\hbar\), respectivamente. Mostre que a dimensão da representação irredutível é \(2j + 1\).
+		      \item Discuta como os valores de \(j\) e \(m\) estão relacionados à estrutura da álgebra de Lie e às representações irredutíveis do grupo de rotações \(SO(3)\). Explique por que \(j\) pode assumir valores inteiros ou semi-inteiros, dependendo da representação.
+	      \end{enumerate}
+
+	\item Considere o conceito de spin em mecânica quântica:
+	      \begin{enumerate}
+		      \item Defina os operadores de spin $\hat{S}_x$, $\hat{S}_y$ e
+		            $\hat{S}_z$ e mostre que eles satisfazem a mesma álgebra de Lie
+		            que os geradores $\hat{J}_i$.
+		      \item Explique a diferença entre momento angular orbital e spin,
+		            destacando as propriedades físicas e matemáticas de cada um.
+		      \item Considere uma partícula com spin $1/2$. Mostre que os autoestados
+		            de $\hat{S}_z$ podem ser escritos como $\ket{+}$ e
+		            $\ket{-}$, e encontre as matrizes de Pauli que
+		            representam os operadores de spin nessa base.
+		      \item Considere uma direção arbitrária no espaço, dada pelo vetor unitário
+		            $\vec{n} = (\sin\theta\cos\phi, \sin\theta\sin\phi, \cos\theta)$.
+		            Encontre o espinor $\ket{\psi}$ que representa uma partícula com
+		            spin $+1/2$ na direção $\vec{n}$. Mostre que esse espinor pode
+		            ser escrito como (a menos de uma fase):
+		            $$
+			            \ket{\psi} = e^{-i\phi/2}\cos\left(\frac{\theta}{2}\right)\ket{+} + e^{i\phi/2}\sin\left(\frac{\theta}{2}\right)\ket{-}.
+		            $$
+		            Explique o significado físico dos ângulos $\theta$ e $\phi$
+		            nessa expressão.
+	      \end{enumerate}
+\end{enumerate}
+
+\end{document}

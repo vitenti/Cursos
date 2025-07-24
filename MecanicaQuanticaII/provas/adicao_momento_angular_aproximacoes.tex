@@ -1,0 +1,100 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Mecânica Quântica II -- Adição de Momento Angular, Métodos de Aproximações}
+
+\begin{document}
+
+\begin{enumerate}
+      \item Considere o espaço produto de dois espaços vetoriais de spin-$1/2$, ou seja,
+            $\mathbb{V} = \mathbb{V}_{1/2} \otimes \mathbb{V}_{1/2}$. Resolva as seguintes
+            questões:
+            \begin{enumerate}
+                  \item Construa o operador momento angular total para $\mathbb{V}$ a partir
+                        dos operadores $\hat{\vec{J}}_1$ e $\hat{\vec{J}}_2$, onde
+                        $\hat{\vec{J}}_1$ e $\hat{\vec{J}}_2$ são os operadores de momento
+                        angular nos espaços $\mathbb{V}_{1/2}$.
+                  \item Mostre que os estados produto $\ket{\pm \pm}$ são autoestados do
+                        operador $\hat{J}_z$.
+                  \item Determine as combinações lineares dos estados $\ket{\pm \pm}$ que formam
+                        autoestados de $\hat{J}^2$ e obtenha os respectivos autovalores.
+                  \item Mostre que o espaço $\mathbb{V}$ se decompõe em uma soma direta de
+                        representações irredutíveis. Quais representações fazem parte dessa
+                        decomposição?
+            \end{enumerate}
+      \item Princípio Variacional. O valor esperado do Hamiltoniano $\hat{H}$ em um estado
+            arbitrário $\ket{\psi}$ no espaço $\mathbb{V}$ satisfaz a desigualdade
+            $$
+                  E[\psi] \equiv \frac{\braket{\psi|\hat{H}|\psi}}{\braket{\psi|\psi}} \geq E_0,
+            $$
+            onde $E_0$ é o menor autovalor de $\hat{H}$. Resolva as seguintes questões:
+            \begin{enumerate}
+                  \item Demonstre a desigualdade acima.
+                  \item Podemos aproximar o autoestado fundamental $\ket{E_0}$ minimizando
+                        $E[\psi_\alpha]$ sobre um conjunto restrito de funções de onda
+                        parametrizadas. Considere o Hamiltoniano
+                        $$
+                              \hat{H} = \frac{\hat{p}^2}{2m} + \lambda \hat{x}^4
+                        $$
+                        e o estado de teste
+                        $$
+                              \braket{x|\psi_\alpha} = \exp\left(-\frac{\alpha x^2}{2}\right).
+                        $$
+                        Mostre que o valor esperado da energia é dado por
+                        $$
+                              E[\psi_\alpha] = \frac{\hbar^2\alpha}{4m} + \frac{3\lambda}{4\alpha^2}.
+                        $$
+                  \item Determine o valor de $\alpha$ que minimiza $E[\psi_\alpha]$ e mostre
+                        que
+                        $$
+                              \alpha = \left(\frac{6m\lambda}{\hbar^2}\right)^{1/3}.
+                        $$
+                  \item Discuta a validade da aproximação e como ele pode ser melhorada e
+                        testada.
+            \end{enumerate}
+      \item Aproximação WKB. Considere uma partícula de massa $m$ sujeita a um potencial
+            unidimensional $V(x)$ que varia lentamente. A equação de Schrödinger
+            independente do tempo é dada por
+            $$
+                  -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V(x) \psi = E \psi.
+            $$
+            Para $E > V(x)$, a aproximação WKB assume que a função de onda pode ser
+            escrita como
+            $$
+                  \psi(x) \approx \frac{1}{\sqrt{p(x)}} \exp\left(\pm \frac{i}{\hbar} \int^x p(x') dx' \right),
+            $$
+            onde $p(x) = \sqrt{2m(E - V(x))}$ é o momento clássico da partícula.
+            Substitua a ansatz WKB na equação de Schrödinger e derive a condição de
+            validade da aproximação WKB. Discuta o seu significado físico.
+      \item Teoria de Perturbação Dependente do Tempo. Considere um sistema quântico
+            descrito por um Hamiltoniano $\hat{H}(t)$ da forma
+            $$
+                  \hat{H}(t) = \hat{H}_0 + \lambda \hat{V}(t),
+            $$
+            onde $\hat{H}_0$ possui autovalores e autoestados conhecidos, ou seja,
+            $$
+                  \hat{H}_0 \ket{n^0} = E_n^0 \ket{n^0}.
+            $$
+            Assumimos que no instante inicial $t = t_0$ o sistema está em um dos autoestados
+            de $\hat{H}_0$, e buscamos a evolução do estado para $t > t_0$. Resolva as
+            seguintes questões:
+            \begin{enumerate}
+                  \item Considere a seguinte expansão para o estado do sistema na base dos
+                        autoestados de $\hat{H}_0$:
+                        $$
+                              \ket{\psi(t)} = \sum_n d_n(t) e^{-iE_n^0 t/\hbar} \ket{n^0}.
+                        $$
+                        Mostre que, ao inserir essa expressão na equação de Schrödinger,
+                        obtemos a equação para os coeficientes $d_n(t)$:
+                        $$
+                              i\hbar \frac{\mathrm{d} d_n}{\mathrm{d}t} = \sum_m e^{i\omega_{nm} t} V_{nm}(t) d_m(t),
+                        $$
+                        onde $\omega_{nm} = (E_n^0 - E_m^0)/\hbar$ e $V_{nm}(t) = \braket{n^0 | \hat{V}(t) | m^0}$.
+                  \item Assuma agora que a perturbação é fraca, isto é, $d_n(t)$ pode ser
+                        expandido em potências de $\lambda$. Escreva explicitamente a equação
+                        diferencial na aproximação de primeira ordem em $\lambda$.
+            \end{enumerate}
+\end{enumerate}
+
+\end{document}
