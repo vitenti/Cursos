@@ -1,0 +1,139 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Lista de Exercícios: Dilatação do Tempo, Contração do Espaço, Paradoxo dos Gêmeos e Efeito Doppler}
+
+\begin{document}
+
+Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos-luz.
+
+\begin{enumerate}
+
+      \item Tempo próprio e dilatação temporal na métrica de Minkowski: Considere duas
+            trajetórias (curvas tipo-tempo) em um espaço-tempo plano com coordenadas
+            $(ct, x^1, x^2, x^3)$:
+
+            \begin{enumerate}
+                  \item[Trajetória 1] partícula em repouso no referencial inercial:
+                        $$x^1(t) = x^1_0,\quad x^2 = x^2_0,\quad x^3 = x^3_0.$$
+
+                  \item[Trajetória 2] partícula em movimento uniforme na direção $x^1$:
+                        $$x^1(t) = x^1_0 + v(t - t_0),\quad x^2 = x^2_0, \quad x^3 = x^3_0.$$
+            \end{enumerate}
+
+            \begin{enumerate}
+                  \item Usando a métrica de Minkowski, calcule o tempo próprio
+                        $\Delta \tau$ medido ao longo de cada trajetória no intervalo entre
+                        $t_0$ e $t_1$.
+                  \item Compare os dois tempos próprios e interprete o resultado como
+                        uma dilatação temporal.
+                  \item Mostre que o tempo próprio calculado ao longo da trajetória 2 é
+                        igual ao tempo coordenado medido em um referencial inercial no qual a
+                        partícula está em repouso. Esse resultado ilustra que o tempo
+                        coordenado de um referencial é, por definição, o tempo próprio das
+                        partículas em repouso nesse referencial.
+                  \item Considere dois eventos $A$ e $B$. No referencial inercial $S$,
+                        temos:
+                        $$
+                              x_A^\mu = (x^0_A, x^1_A) = (4, 1), \quad
+                              x_B^\mu = (x^0_B, x^1_B) = (1, 5)
+                        $$
+                        Determine a velocidade $v$ de um referencial inercial $S'$ em
+                        que os eventos $A$ e $B$ são simultâneos (i.e., ocorrem no mesmo
+                        instante em $S'$).
+            \end{enumerate}
+
+      \item Paradoxo dos gêmeos e estrutura do espaço-tempo: Considere o paradoxo dos
+            gêmeos, com um dos gêmeos partindo da Terra (posição $x = 0$) em uma viagem
+            até $x = 2$ com velocidade $v = \sqrt{3/4}$, retornando com velocidade $v =
+                  -\sqrt{3/4}$.
+
+            \begin{enumerate}
+                  \item Trace as linhas de simultaneidade nos referenciais inerciais da
+                        Terra e da nave durante os trechos de ida e de volta. Mostre que
+                        as linhas de simultaneidade da nave antes e depois da inversão
+                        se cruzam. Discuta a consequência disso para a contagem do tempo
+                        próprio e a interpretação dos eventos na perspectiva da nave.
+
+                  \item A mudança de velocidade da nave implica uma descontinuidade nas
+                        linhas de simultaneidade. Como descrever essa situação usando um
+                        único sistema de coordenadas contínuo ao longo da trajetória da
+                        nave?
+
+                  \item Analise como a mudança instantânea de velocidade afeta o tempo
+                        próprio acumulado pela nave. Como essa mudança pode ser
+                        interpretada geometricamente no diagrama de espaço-tempo? E como
+                        ela pode ser calculada?
+
+                  \item Conceitualmente, por que não há simetria entre os dois gêmeos?
+                        Qual elemento físico rompe a equivalência entre os referenciais?
+                        Mostre como o uso de um único referencial inercial e o tempo
+                        próprio ajuda a resolver o aparente paradoxo.
+            \end{enumerate}
+
+      \item Derivando o efeito Doppler relativístico: Considere dois observadores em
+            movimento relativo com velocidade $v$ ao longo do eixo $x^1$.
+
+            \begin{enumerate}
+                  \item Defina o período de emissão de sinais do ponto de vista do
+                        emissor e do observador. Explique como esse período pode ser calculado
+                        no referencial de cada um, destacando a distinção entre tempo próprio
+                        e tempo coordenado.
+
+                  \item Suponha que o emissor está em movimento com velocidade $v$ e o
+                        observador está em repouso à direita. Calcule a frequência
+                        (própria) observada $\nu_o$ em função da frequência (própria)
+                        emitida $\nu_e$, obtendo:
+                        $$
+                              \nu_o = \nu_e \sqrt{\frac{1 + \beta}{1 - \beta}}, \quad \beta = \frac{v}{c}
+                        $$
+
+                  \item Repita o cálculo no referencial em que o emissor está em repouso
+                        e o observador se move com velocidade $-v$. Mostre que o resultado
+                        obtido é o mesmo, reforçando a consistência do efeito Doppler
+                        relativístico sob transformações de Lorentz.
+            \end{enumerate}
+
+      \item Vetores como derivadas direcionais:
+            \begin{enumerate}
+                  \item Mostre que a derivada direcional ao longo de um vetor $v$,
+                        $$
+                              \frac{\partial f}{\partial v} \equiv \lim_{\epsilon \to 0}
+                              \frac{f(x + \epsilon v) - f(x)}{\epsilon},
+                        $$
+                        pode ser escrita na forma tensorial como:
+                        $$
+                              \frac{\partial f}{\partial v} = v^\mu \frac{\partial f}{\partial x^\mu}.
+                        $$
+                        Assim, o vetor $v$ pode ser representado por:
+                        $$
+                              v \equiv v^\mu \frac{\partial }{\partial x^\mu}.
+                        $$
+
+                  \item Dada uma transformação de coordenadas $y^\mu = \phi_y^\mu(x)$,
+                        com inversa $x^\mu = \phi_x^\mu(y)$, use a representação anterior para
+                        mostrar que as componentes transformadas do vetor satisfazem:
+                        $$
+                              v^{\prime\mu} = \frac{\partial \phi_y^\mu}{\partial x^\nu} v^\nu.
+                        $$
+                  \item Seja $x^\mu(t)$ uma curva parametrizada por $t$ em um espaço com
+                        coordenadas $x^\mu$. Mostre que a variação infinitesimal de uma
+                        função escalar $f(x)$ ao longo da curva pode ser escrita como
+                        $$
+                              \mathrm{d}f[x(t)] = \lim_{\epsilon \to 0} \frac{1}{\epsilon} \int_t^{t+\epsilon} \frac{\partial f}{\partial x^\mu} \frac{\mathrm{d}x^\mu(t)}{\mathrm{d}t} \,\mathrm{d}t = \frac{\mathrm{d}f}{\mathrm{d}v},
+                        $$
+                        onde $v^\mu \equiv \frac{\mathrm{d}x^\mu(t)}{\mathrm{d}t}$
+                        representa o vetor tangente à curva. Conclua que a quantidade
+                        $\frac{\partial f}{\partial x^\mu}$ define um objeto que age
+                        linearmente sobre vetores: um \textbf{covetor} (ou 1-forma).
+
+                  \item Com base na expressão anterior, mostre que a ação de um covetor
+                        $w_\mu$ sobre um vetor $v^\mu$ pode ser escrita como:
+                        $$
+                              w(v) = w_\mu \,\mathrm{d}x^\mu(v) = w_\mu v^\mu.
+                        $$
+
+            \end{enumerate}
+\end{enumerate}
+\end{document}
