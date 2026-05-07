@@ -1,0 +1,148 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Avaliação Diagnóstica}
+
+% ------------------------------------------------------------------
+% Configurações de página e estilo
+\geometry{margin=2.5cm}
+\hypersetup{hidelinks}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small Universidade / Curso}
+\cfoot{\small Página \thepage~de \pageref{LastPage}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% Títulos mais compactos
+\titlespacing*{\section}{0pt}{0.6em}{0.3em}
+\titlespacing*{\subsection}{0pt}{0.5em}{0.2em}
+
+% Ambiente para respostas longas
+\newcommand{\answerlines}[1]{% #1 = altura em cm
+  \vspace*{#1}
+}
+
+% Caixa de instruções
+\newenvironment{instructions}{%
+  \begin{center}
+    \setlength{\fboxsep}{8pt}%
+    \fbox{\begin{minipage}{0.95\linewidth}\small
+}{%
+    \end{minipage}}%
+  \end{center}
+}
+
+\begin{document}
+
+\vspace{-1cm}
+
+% ------------------------------------------------------------------
+\section*{Parte A — Matemática como ferramenta}
+
+\textbf{1.} Explique qual é o papel do limite no cálculo diferencial e integral. Dê um
+exemplo de como ele é usado em uma situação prática. Que tipo de modelo físico pode
+ser descrito usando limites?
+
+\answerlines{3.2cm}
+
+\textbf{2.} Explique como você entende a diferença entre \textit{derivada} e
+\textit{integral}. Dê um exemplo de situação física em que cada uma aparece.
+
+\answerlines{3.2cm}
+
+\textbf{3.} No espaço tridimensional, o que significa dizer que $\vec{A}\cdot\vec{B}=0$?
+Comente uma implicação geométrica e uma física possível.
+
+\answerlines{3.2cm}
+
+% ------------------------------------------------------------------
+\section*{Parte B — Fundamentos de Física}
+
+\textbf{4.} O que é um \textit{referencial} em Física? Por que precisamos escolhê-lo ao
+descrever movimentos?
+
+\answerlines{3.2cm}
+
+\textbf{5.} Uma bola é lançada verticalmente para cima e retorna ao ponto de lançamento.
+Descreva qualitativamente (sem contas) como variam, ao longo do tempo: \textit{posição},
+\textit{velocidade} e \textit{aceleração}.
+
+\answerlines{4.2cm}
+
+\textbf{6.} Por que as \textit{leis de conservação} (por exemplo, energia, momento
+linear, carga elétrica) são centrais em Física? Dê um exemplo de problema em que elas
+ajudam a resolver sem muitos detalhes matemáticos.
+
+\answerlines{3.6cm}
+
+\textbf{7.} Diferencie uma \textit{lei física} (ex.: gravitação de Newton) de uma
+\textit{definição} (ex.: velocidade média). Explique com um exemplo de cada.
+
+\pagebreak
+
+% ------------------------------------------------------------------
+\section*{Parte C — Questões praticas}
+
+\textbf{8. Derivada simples} \\
+Calcule a derivada de
+\[
+  f(x) = x^2 \sin x.
+\]
+
+\vspace{3cm}
+
+\textbf{9. Integral elementar} \\
+Calcule a integral indefinida
+\[
+  \int (2x + 3)\, dx.
+\]
+
+\vspace{3cm}
+
+\textbf{10. Identidade trigonométrica} \\
+Mostre que (use a definição de seno e cosseno em termos dos catetos e hipotenusa para um
+triângulo retângulo)
+\[
+  \sin^2\theta + \cos^2\theta = 1
+\]
+e, a partir disso, escreva $\tan^2\theta$ em função de $\sec^2\theta$.
+
+\vspace{3cm}
+
+\textbf{11. Manipulação algébrica/física simples} \\
+Um corpo em queda livre tem posição dada por
+\[
+  y(t) = y_0 + v_0 t - \tfrac{1}{2}gt^2.
+\]
+Encontre:
+\begin{enumerate}
+  \item[a)] a velocidade $v(t)$;
+  \item[b)] o instante em que a velocidade se anula.
+\end{enumerate}
+
+
+
+
+% ------------------------------------------------------------------
+\section*{Parte D — Autoavaliação}
+
+\textbf{12.} Em quais tópicos de \textit{matemática} ou \textit{física} você se sente
+mais seguro? Diga por quê.
+
+\answerlines{2.8cm}
+
+\textbf{13.} Em quais tópicos você sente mais dificuldade ou insegurança? O que ajudaria
+você a progredir?
+
+\answerlines{2.8cm}
+
+\textbf{14.} O que você espera aprender neste curso? Há algum tema específico de
+interesse?
+
+\answerlines{2.8cm}
+
+
+\end{document}
