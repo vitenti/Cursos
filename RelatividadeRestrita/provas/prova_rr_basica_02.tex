@@ -1,0 +1,98 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Prova: Dilatação do Tempo, Contração do Espaço, Paradoxo dos Gêmeos e Efeito Doppler}
+
+\begin{document}
+
+Em toda a prova abaixo usaremos assinatura $(-,+,+,+)$ e coordenadas em anos-luz.
+
+\begin{enumerate}
+
+      \item Separação invariante e relatividade da simultaneidade: Considere dois
+            eventos $A$ e $B$. No referencial inercial $S$, temos:
+            $$
+                  x_A^\mu = (x^0_A, x^1_A) = (3, 7), \quad
+                  x_B^\mu = (x^0_B, x^1_B) = (1, 3).
+            $$
+
+            \begin{enumerate}
+                  \item Calcule a separação invariante $\Delta s^2$ usando a métrica
+                        de Minkowski $\eta_{\mu\nu} = \mathrm{diag}(-1,1)$, classifique
+                        a separação (tipo tempo, tipo espaço ou nula) e determine qual
+                        evento ocorre primeiro em $S$.
+
+                  \item Determine a velocidade $v$ de um referencial $S'$ em que $A$
+                        e $B$ são simultâneos. Mostre explicitamente, usando a
+                        transformação de Lorentz, que as coordenadas de tempo de $A$ e
+                        $B$ coincidem em $S'$.
+
+                  \item É possível encontrar um referencial em que a \emph{ordem
+                              temporal} dos eventos seja invertida? E a \emph{ordem
+                              espacial}? Justifique ambas as respostas usando $\Delta s^2$ e
+                        interprete fisicamente.
+            \end{enumerate}
+
+      \item Invariância da métrica e transformações de Lorentz: Considere um
+            referencial $S'$ em movimento com velocidade $v$ ao longo do eixo $x^1$.
+
+            \begin{enumerate}
+                  \item Escreva a transformação de Lorentz na forma tensorial
+                        $x^{\prime\mu} = \Lambda^\mu{}_\nu\, x^\nu$, exibindo
+                        explicitamente $\Lambda^\mu{}_\nu$ em termos de $\gamma$ e
+                        $\beta = v/c$. Mostre que a métrica satisfaz
+                        $\Lambda^\rho{}_\mu\, \Lambda^\sigma{}_\nu\, \eta_{\rho\sigma}
+                              = \eta_{\mu\nu}$.
+
+                  \item Use o resultado anterior para mostrar que tanto o intervalo
+                        $\Delta s^2 = \eta_{\mu\nu}\,\Delta x^\mu \Delta x^\nu$ quanto
+                        o tempo próprio
+                        $\Delta\tau = \int \sqrt{-\eta_{\mu\nu}\,\dot{x}^\mu\dot{x}^\nu}\,dt$
+                        são invariantes sob transformações de Lorentz.
+            \end{enumerate}
+
+      \item Paradoxo dos gêmeos: Um gêmeo parte da Terra ($x = 0$) até $x = 2$
+            anos-luz com $v = \sqrt{3}/2$, retornando com $v = -\sqrt{3}/2$.
+
+            \begin{enumerate}
+                  \item Represente a situação em um diagrama de espaço-tempo
+                        $(x^0, x^1)$, marcando os eventos de partida, inversão e
+                        reencontro. Calcule o tempo coordenado total na Terra e o tempo
+                        próprio acumulado pela nave usando
+                        $\Delta\tau = \Delta t\sqrt{1 - v^2/c^2}$. Compare os
+                        resultados.
+
+                  \item Trace as linhas de simultaneidade da Terra e da nave (ida e
+                        volta). Mostre que as linhas de simultaneidade da nave se cruzam
+                        no evento de inversão e discuta a consequência para a contagem
+                        do tempo próprio.
+
+                  \item Por que não há simetria entre os dois gêmeos? Qual elemento
+                        físico rompe a equivalência entre os referenciais? Como o tempo
+                        próprio resolve o aparente paradoxo?
+            \end{enumerate}
+
+      \item Vetores e covetores: Seja $y^\mu = \phi_y^\mu(x)$ uma transformação de
+            coordenadas com inversa $x^\mu = \phi_x^\mu(y)$.
+
+            \begin{enumerate}
+                  \item Mostre que a derivada direcional satisfaz
+                        $\frac{\partial f}{\partial v} = v^\mu\frac{\partial
+                                    f}{\partial x^\mu}$, justificando a representação $v \equiv
+                              v^\mu\frac{\partial}{\partial x^\mu}$. Use esse resultado para
+                        mostrar que as componentes do vetor transformam como
+                        $v^{\prime\mu} = \frac{\partial \phi_y^\mu}{\partial x^\nu}v^\nu$.
+
+                  \item Mostre que o covetor $w_\mu = \frac{\partial f}{\partial
+                                    x^\mu}$ transforma como
+                        $w'_\nu = \frac{\partial \phi_x^\mu}{\partial y^\nu}w_\mu$,
+                        ou seja, com o jacobiano inverso em relação ao vetor. Prove
+                        que os jacobianos $\frac{\partial \phi_y^\mu}{\partial x^\nu}$
+                        e $\frac{\partial \phi_x^\mu}{\partial y^\nu}$ são inversos um
+                        do outro usando a regra da cadeia em
+                        $\phi_y \circ \phi_x = \mathrm{id}$.
+            \end{enumerate}
+
+\end{enumerate}
+\end{document}
