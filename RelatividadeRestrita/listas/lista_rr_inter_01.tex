@@ -9,16 +9,16 @@
 Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos-luz.
 
 \begin{enumerate}
+
       \item Quadrivelocidade e tempo próprio: Seja $x^\mu(\tau)$ a trajetória de uma
-            partícula parametrizada pelo seu tempo próprio $\tau$.
+            partícula parametrizada pelo seu tempo próprio $\tau$ e defina a
+            quadrivelocidade por
+            $$
+                  u^\mu \equiv \frac{1}{c}\frac{\mathrm{d}x^\mu}{\mathrm{d}\tau}.
+            $$
 
             \begin{enumerate}
-                  \item Defina a quadrivelocidade por
-                        $$
-                              u^\mu \equiv \frac{1}{c}\frac{\mathrm{d}x^\mu}{\mathrm{d}\tau}.
-                        $$
-
-                        Mostre que $u^\mu$ transforma-se como um quadrivetor sob
+                  \item Mostre que $u^\mu$ transforma-se como um quadrivetor sob
                         transformações de Lorentz.
 
                   \item Mostre que
@@ -38,14 +38,12 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                         $$
             \end{enumerate}
 
-      \item Quadriaceleração:
+      \item Quadriaceleração: Defina a quadriaceleração por
+            $$
+                  a^\mu\equiv\frac{\mathrm d u^\mu}{\mathrm d\tau}.
+            $$
 
             \begin{enumerate}
-                  \item Defina a quadriaceleração por
-                        $$
-                              a^\mu\equiv\frac{\mathrm d u^\mu}{\mathrm d\tau}.
-                        $$
-
                   \item Mostre que $a^\mu$ transforma-se como um quadrivetor.
 
                   \item Derive a relação
@@ -56,13 +54,13 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                   \item Interprete geometricamente o resultado obtido.
             \end{enumerate}
 
-      \item Quadrimomento:
+      \item Quadrimomento: Defina o quadrimomento por
+            $$
+                  p^\mu\equiv mc\,u^\mu.
+            $$
 
             \begin{enumerate}
-                  \item Defina o quadrimomento por
-                        $$
-                              p^\mu\equiv mc\,u^\mu.
-                        $$
+                  \item Justifique fisicamente essa definição.
 
                   \item Mostre que
                         $$
@@ -99,6 +97,7 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                               E=pc.
                         $$
             \end{enumerate}
+
       \item Energia relativística:
 
             \begin{enumerate}
@@ -136,14 +135,13 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                         $$
                         Interprete fisicamente os dois termos desta expressão.
             \end{enumerate}
-      \item Quadriforça:
+
+      \item Quadriforça: Defina a quadriforça por
+            $$
+                  F^\mu\equiv\frac{\mathrm d p^\mu}{\mathrm d\tau}.
+            $$
 
             \begin{enumerate}
-                  \item Defina a quadriforça por
-                        $$
-                              F^\mu\equiv\frac{\mathrm d p^\mu}{\mathrm d\tau}.
-                        $$
-
                   \item Mostre que $F^\mu$ transforma-se como um quadrivetor.
 
                   \item Demonstre que
@@ -155,14 +153,12 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                         tridimensional.
             \end{enumerate}
 
-      \item Quadrivetor de onda e efeito Doppler:
+      \item Quadrivetor de onda e efeito Doppler: Considere uma onda plana cuja fase é
+            $$
+                  \phi=k_\mu x^\mu.
+            $$
 
             \begin{enumerate}
-                  \item Considere uma onda plana cuja fase é dada por
-                        $$
-                              \phi=k_\mu x^\mu.
-                        $$
-
                   \item Mostre que a invariância da fase implica que $k^\mu$ é um
                         quadrivetor.
 
@@ -204,18 +200,16 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                   \item Discuta a interpretação geométrica desse resultado.
             \end{enumerate}
 
-      \item Quadripotencial eletromagnético:
+      \item Quadripotencial eletromagnético: Defina o quadripotencial
+            $$
+                  A^\mu=
+                  \left(
+                  \frac{\phi}{c},
+                  \mathbf A
+                  \right).
+            $$
 
             \begin{enumerate}
-                  \item Defina o quadripotencial
-                        $$
-                              A^\mu=
-                              \left(
-                              \frac{\phi}{c},
-                              \mathbf A
-                              \right).
-                        $$
-
                   \item Mostre que $A^\mu$ transforma-se como um quadrivetor.
 
                   \item Identifique suas componentes temporal e espaciais.
@@ -223,18 +217,16 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                   \item Discuta a liberdade de calibre.
             \end{enumerate}
 
-      \item Tensor eletromagnético:
+      \item Tensor eletromagnético: Defina
+            $$
+                  F_{\mu\nu}
+                  =
+                  \partial_\mu A_\nu
+                  -
+                  \partial_\nu A_\mu.
+            $$
 
             \begin{enumerate}
-                  \item Defina
-                        $$
-                              F_{\mu\nu}
-                              =
-                              \partial_\mu A_\nu
-                              -
-                              \partial_\nu A_\mu.
-                        $$
-
                   \item Mostre que $F_{\mu\nu}$ é antissimétrico.
 
                   \item Escreva explicitamente sua matriz de componentes em termos dos
@@ -282,14 +274,12 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                         elétrico e magnético.
             \end{enumerate}
 
-      \item Equações de Maxwell com fontes:
+      \item Equações de Maxwell com fontes: Defina a quadricorrente
+            $$
+                  J^\mu=(c\rho,\mathbf J).
+            $$
 
             \begin{enumerate}
-                  \item Defina a quadricorrente
-                        $$
-                              J^\mu=(c\rho,\mathbf J).
-                        $$
-
                   \item Mostre que as equações de Maxwell com fontes podem ser
                         escritas como
                         $$
@@ -303,18 +293,16 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
                   \item Recupere a lei de Ampère-Maxwell.
             \end{enumerate}
 
-      \item Equações homogêneas de Maxwell:
+      \item Equações homogêneas de Maxwell: Defina o tensor dual
+            $$
+                  \widetilde F^{\mu\nu}
+                  =
+                  \frac12
+                  \epsilon^{\mu\nu\rho\sigma}
+                  F_{\rho\sigma}.
+            $$
 
             \begin{enumerate}
-                  \item Defina o tensor dual
-                        $$
-                              \widetilde F^{\mu\nu}
-                              =
-                              \frac12
-                              \epsilon^{\mu\nu\rho\sigma}
-                              F_{\rho\sigma}.
-                        $$
-
                   \item Mostre que
                         $$
                               \partial_\mu\widetilde F^{\mu\nu}=0.
@@ -324,5 +312,7 @@ Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos
 
                   \item Recupere a lei de Faraday.
             \end{enumerate}
+
 \end{enumerate}
+
 \end{document}
