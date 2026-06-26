@@ -1,0 +1,131 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Prova II}
+
+\begin{document}
+\begin{center}
+    \textbf{\Large Prova II -- Relatividade Restrita}
+\end{center}
+\begin{enumerate}
+    \item (3 pontos) Considere a quadrivelocidade
+          $u^\mu=\frac{1}{c}\frac{dx^\mu}{d\tau}$, onde $x^\mu = (ct, \mathbf r)$.
+          \begin{enumerate}
+              \item Mostre que
+                    $$
+                        u^\mu=(\gamma,\gamma\beta_x,\gamma\beta_y,\gamma\beta_z),
+                    $$
+                    onde $\beta_i=v_i/c$ e $\gamma=1/\sqrt{1-\beta^2}$, com $\beta^2 = \beta_x^2+\beta_y^2+\beta_z^2$.
+
+              \item A partir da definição de $u^\mu$, demonstre a condição de normalização
+                    $$
+                        u^\mu u_\mu=-1,
+                    $$
+                    utilizando explicitamente a relação $d\tau = dt/\gamma$ e a métrica
+                    $(-,+,+,+)$.
+
+              \item Uma partícula move-se com velocidade tridimensional
+                    $$
+                        \mathbf v=(0.6c,\;0.3c,\;0).
+                    $$
+                    Calcule explicitamente as quatro componentes contravariantes de
+                    $u^\mu$ e verifique numericamente que $u^\mu u_\mu = -1$.
+          \end{enumerate}
+
+    \item (3 pontos) Considere o quadrimomento de uma partícula relativística de massa
+          $m$: $p^\mu = m c \, u^\mu$, onde $u^\mu$ é a quadrivelocidade definida na
+          questão anterior.
+
+          \begin{enumerate}
+              \item Usando $u^\mu = \gamma(c, \mathbf v)$, demonstre que $p^\mu =
+                        \left( \frac{E}{c}, \mathbf p \right)$, identificando
+                    explicitamente $E = \gamma m c^2$, $\mathbf p = \gamma m
+                        \mathbf v$. Interprete fisicamente o limite não-relativístico
+                    ($v \ll c$) dessas expressões.
+
+              \item Utilizando o invariante de Lorentz $p^\mu p_\mu = -m^2 c^2$ e a
+                    relação do item anterior, deduza a equação de dispersão relativística:
+                    $$
+                        E^2 = p^2 c^2 + m^2 c^4.
+                    $$
+                    Em seguida, reescreva essa expressão na forma
+                    $$
+                        \frac{E}{mc^2} = \sqrt{1 + \left(\frac{p}{mc}\right)^2}.
+                    $$
+                    Discuta o que ocorre no limite $p \ll mc$ e no limite $p \gg mc$.
+
+              \item Um elétron (massa $m_e$) possui energia total $E = 3 m_e c^2$.
+                    Determine sua velocidade $v$ em unidades de $c$ e o fator de
+                    Lorentz $\gamma$. Calcule também o momento linear $p$ em unidades
+                    de $m_e c$ e mostre que, para essa energia, $p > 2 m_e c$. Comente
+                    por que esse resultado é esperado fisicamente.
+          \end{enumerate}
+
+    \item (2 pontos) Considere o tensor eletromagnético definido em termos do
+          quadripotencial $A^\mu = (\phi/c, \mathbf A)$:
+          $$
+              F_{\mu\nu}
+              =
+              \partial_\mu A_\nu
+              -
+              \partial_\nu A_\mu,
+              \qquad
+              \partial_\mu = \left(\frac{1}{c}\frac{\partial}{\partial t}, \nabla\right).
+          $$
+
+          \begin{enumerate}
+              \item Mostre que $F_{\mu\nu}$ é antissimétrico e que, como consequência,
+                    sua diagonal é nula. Em seguida, demonstre que a antissimetria implica a
+                    identidade de Bianchi:
+                    $$
+                        \partial_\lambda F_{\mu\nu} + \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} = 0.
+                    $$
+                    Interprete essa identidade em termos das equações de Maxwell
+                    homogêneas.
+
+              \item Usando as definições dos campos elétrico e magnético em termos do potencial,
+                    $$
+                        \mathbf E = -\nabla \phi - \frac{\partial \mathbf A}{\partial t}, \qquad \mathbf B = \nabla \times \mathbf A,
+                    $$
+                    escreva explicitamente a matriz $4\times 4$ de componentes de
+                    $F_{\mu\nu}$ em termos de $\mathbf E$ e $\mathbf B$, com índices
+                    $\mu,\nu = 0,1,2,3$.
+          \end{enumerate}
+
+
+    \item (2 pontos) Invariantes do campo eletromagnético.
+
+          \begin{enumerate}
+              \item Mostre, a partir da definição de $F_{\mu\nu}$ em termos de $\mathbf
+                        E$ e $\mathbf B$, que
+                    $$
+                        F_{\mu\nu}F^{\mu\nu}
+                        =
+                        2\left(
+                        B^2-\frac{E^2}{c^2}
+                        \right).
+                    $$
+                    Dica: Utilize a matriz de $F^{\mu\nu}$ obtida por elevação de
+                    índices com a métrica $(-,+,+,+)$.
+
+              \item Em um dado referencial inercial, os campos são
+                    $$
+                        \mathbf E=(0,E_0,0),
+                        \qquad
+                        \mathbf B=\left(0,\frac{E_0}{c},0\right),
+                    $$
+                    com $E_0$ constante. Calcule os dois invariantes de Lorentz do
+                    campo eletromagnético neste referencial:
+                    $$
+                        \mathcal{I}_1 = F_{\mu\nu}F^{\mu\nu}, \qquad
+                        \mathcal{I}_2 = \epsilon_{\mu\nu\rho\sigma} F^{\mu\nu} F^{\rho\sigma}
+                    $$
+                    Interprete fisicamente o resultado obtido para $\mathcal{I}_1$: o
+                    que isso implica sobre a possibilidade de transformar este campo
+                    para um referencial onde $\mathbf E' = 0$ ou $\mathbf B' = 0$?
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
