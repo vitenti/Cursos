@@ -1,0 +1,328 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Lista de Exercícios: Dilatação do Tempo, Contração do Espaço, Paradoxo dos Gêmeos e Efeito Doppler}
+
+\begin{document}
+
+Em toda a lista abaixo usaremos assinaturas $(-,+,+,+)$ e as coordenadas em anos-luz.
+
+\begin{enumerate}
+      \item Quadrivelocidade e tempo próprio: Seja $x^\mu(\tau)$ a trajetória de uma
+            partícula parametrizada pelo seu tempo próprio $\tau$.
+
+            \begin{enumerate}
+                  \item Defina a quadrivelocidade por
+                        $$
+                              u^\mu \equiv \frac{1}{c}\frac{\mathrm{d}x^\mu}{\mathrm{d}\tau}.
+                        $$
+
+                        Mostre que $u^\mu$ transforma-se como um quadrivetor sob
+                        transformações de Lorentz.
+
+                  \item Mostre que
+                        $$
+                              u^\mu=(\gamma,\gamma\beta^1,\gamma\beta^2,\gamma\beta^3),
+                        $$
+                        onde $\beta^i=v^i/c$.
+
+                  \item Utilizando a métrica de Minkowski, demonstre que
+                        $$
+                              u^\mu u_\mu=-1.
+                        $$
+
+                  \item Mostre que, para uma partícula em repouso,
+                        $$
+                              u^\mu=(1,0,0,0).
+                        $$
+            \end{enumerate}
+
+      \item Quadriaceleração:
+
+            \begin{enumerate}
+                  \item Defina a quadriaceleração por
+                        $$
+                              a^\mu\equiv\frac{\mathrm d u^\mu}{\mathrm d\tau}.
+                        $$
+
+                  \item Mostre que $a^\mu$ transforma-se como um quadrivetor.
+
+                  \item Derive a relação
+                        $$
+                              u^\mu a_\mu=0.
+                        $$
+
+                  \item Interprete geometricamente o resultado obtido.
+            \end{enumerate}
+
+      \item Quadrimomento:
+
+            \begin{enumerate}
+                  \item Defina o quadrimomento por
+                        $$
+                              p^\mu\equiv mc\,u^\mu.
+                        $$
+
+                  \item Mostre que
+                        $$
+                              p^\mu=
+                              \left(
+                              \frac{E}{c},
+                              \mathbf p
+                              \right).
+                        $$
+
+                  \item Demonstre que
+                        $$
+                              p^\mu p_\mu=-m^2c^2.
+                        $$
+
+                  \item Mostre que essa quantidade é invariante sob transformações de
+                        Lorentz.
+            \end{enumerate}
+
+      \item Relação energia-momento:
+
+            \begin{enumerate}
+                  \item Utilizando o resultado do exercício anterior, demonstre que
+                        $$
+                              E^2=p^2c^2+m^2c^4.
+                        $$
+
+                  \item Obtenha o limite não relativístico dessa expressão.
+
+                  \item Considere o caso $m=0$.
+
+                  \item Mostre que, nesse caso,
+                        $$
+                              E=pc.
+                        $$
+            \end{enumerate}
+      \item Energia relativística:
+
+            \begin{enumerate}
+                  \item Considere uma partícula de massa $m$ e velocidade $\mathbf{v}$.
+                        Utilizando a definição do quadrimomento
+                        $$
+                              p^\mu = mc\,u^\mu,
+                        $$
+                        mostre que sua componente temporal pode ser escrita como
+                        $$
+                              p^0 = \gamma mc.
+                        $$
+
+                  \item Definindo a energia relativística por
+                        $$
+                              E \equiv cp^0,
+                        $$
+                        demonstre que
+                        $$
+                              E = \gamma mc^2.
+                        $$
+
+                  \item Utilizando a relação
+                        $$
+                              p = \gamma mv,
+                        $$
+                        elimine $\gamma$ e obtenha a expressão
+                        $$
+                              E^2 = p^2c^2 + m^2c^4.
+                        $$
+
+                  \item Mostre que, no limite $v \ll c$,
+                        $$
+                              E \simeq mc^2 + \frac12 mv^2.
+                        $$
+                        Interprete fisicamente os dois termos desta expressão.
+            \end{enumerate}
+      \item Quadriforça:
+
+            \begin{enumerate}
+                  \item Defina a quadriforça por
+                        $$
+                              F^\mu\equiv\frac{\mathrm d p^\mu}{\mathrm d\tau}.
+                        $$
+
+                  \item Mostre que $F^\mu$ transforma-se como um quadrivetor.
+
+                  \item Demonstre que
+                        $$
+                              F^\mu u_\mu=0.
+                        $$
+
+                  \item Relacione as componentes de $F^\mu$ com a força
+                        tridimensional.
+            \end{enumerate}
+
+      \item Quadrivetor de onda e efeito Doppler:
+
+            \begin{enumerate}
+                  \item Considere uma onda plana cuja fase é dada por
+                        $$
+                              \phi=k_\mu x^\mu.
+                        $$
+
+                  \item Mostre que a invariância da fase implica que $k^\mu$ é um
+                        quadrivetor.
+
+                  \item Escreva
+                        $$
+                              k^\mu=
+                              \left(
+                              \frac{\omega}{c},
+                              \mathbf k
+                              \right).
+                        $$
+
+                  \item Obtenha a fórmula relativística para o efeito Doppler a partir
+                        de uma transformação de Lorentz.
+            \end{enumerate}
+
+      \item Fótons:
+
+            \begin{enumerate}
+                  \item Mostre que, para uma onda eletromagnética no vácuo,
+                        $$
+                              k^\mu k_\mu=0.
+                        $$
+
+                  \item Utilizando
+                        $$
+                              p^\mu=\hbar k^\mu,
+                        $$
+                        mostre que
+                        $$
+                              p^\mu p_\mu=0.
+                        $$
+
+                  \item Demonstre que
+                        $$
+                              E=pc.
+                        $$
+
+                  \item Discuta a interpretação geométrica desse resultado.
+            \end{enumerate}
+
+      \item Quadripotencial eletromagnético:
+
+            \begin{enumerate}
+                  \item Defina o quadripotencial
+                        $$
+                              A^\mu=
+                              \left(
+                              \frac{\phi}{c},
+                              \mathbf A
+                              \right).
+                        $$
+
+                  \item Mostre que $A^\mu$ transforma-se como um quadrivetor.
+
+                  \item Identifique suas componentes temporal e espaciais.
+
+                  \item Discuta a liberdade de calibre.
+            \end{enumerate}
+
+      \item Tensor eletromagnético:
+
+            \begin{enumerate}
+                  \item Defina
+                        $$
+                              F_{\mu\nu}
+                              =
+                              \partial_\mu A_\nu
+                              -
+                              \partial_\nu A_\mu.
+                        $$
+
+                  \item Mostre que $F_{\mu\nu}$ é antissimétrico.
+
+                  \item Escreva explicitamente sua matriz de componentes em termos dos
+                        campos elétrico e magnético.
+
+                  \item Mostre que $F_{\mu\nu}$ transforma-se tensorialmente sob
+                        transformações de Lorentz.
+            \end{enumerate}
+
+      \item Transformações dos campos eletromagnéticos:
+
+            \begin{enumerate}
+                  \item Considere um boost ao longo do eixo $x$.
+
+                  \item Utilize a transformação tensorial de $F_{\mu\nu}$ para obter
+                        as transformações dos campos elétrico e magnético.
+
+                  \item Mostre que componentes de $\mathbf E$ e $\mathbf B$
+                        misturam-se sob transformações de Lorentz.
+
+                  \item Interprete esse resultado fisicamente.
+            \end{enumerate}
+
+      \item Invariantes do campo eletromagnético:
+
+            \begin{enumerate}
+                  \item Mostre que
+                        $$
+                              F_{\mu\nu}F^{\mu\nu}
+                        $$
+                        é um invariante de Lorentz.
+
+                  \item Escreva esse invariante em termos de $\mathbf E$ e
+                        $\mathbf B$.
+
+                  \item Mostre que
+                        $$
+                              \epsilon^{\mu\nu\rho\sigma}
+                              F_{\mu\nu}
+                              F_{\rho\sigma}
+                        $$
+                        também é um invariante de Lorentz.
+
+                  \item Escreva esse segundo invariante em termos dos campos
+                        elétrico e magnético.
+            \end{enumerate}
+
+      \item Equações de Maxwell com fontes:
+
+            \begin{enumerate}
+                  \item Defina a quadricorrente
+                        $$
+                              J^\mu=(c\rho,\mathbf J).
+                        $$
+
+                  \item Mostre que as equações de Maxwell com fontes podem ser
+                        escritas como
+                        $$
+                              \partial_\mu F^{\mu\nu}
+                              =
+                              \mu_0J^\nu.
+                        $$
+
+                  \item Recupere a lei de Gauss.
+
+                  \item Recupere a lei de Ampère-Maxwell.
+            \end{enumerate}
+
+      \item Equações homogêneas de Maxwell:
+
+            \begin{enumerate}
+                  \item Defina o tensor dual
+                        $$
+                              \widetilde F^{\mu\nu}
+                              =
+                              \frac12
+                              \epsilon^{\mu\nu\rho\sigma}
+                              F_{\rho\sigma}.
+                        $$
+
+                  \item Mostre que
+                        $$
+                              \partial_\mu\widetilde F^{\mu\nu}=0.
+                        $$
+
+                  \item Recupere a lei de Gauss para o magnetismo.
+
+                  \item Recupere a lei de Faraday.
+            \end{enumerate}
+\end{enumerate}
+\end{document}
