@@ -1,0 +1,78 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Prova de Física Matemática II -- Distribuições, Funções de Green e EDO (Recuperação)}
+
+\begin{document}
+
+\begin{enumerate}
+
+	\item Considere a função degrau de Heaviside $\theta(x)$ e a distribuição
+	      delta de Dirac $\delta(x)$.
+	      \begin{enumerate}
+		      \item Partindo do Teorema Fundamental do Cálculo, mostre que
+		            $$
+			            \frac{\dd}{\dd x}\theta(x-x_0) = \delta(x-x_0).
+		            $$
+		      \item Usando o resultado do item anterior, calcule
+		            $\dfrac{\dd}{\dd x}\big[e^{-x}\theta(x)\big]$ e
+		            $\dfrac{\dd^2}{\dd x^2}\big[e^{-x}\theta(x)\big]$, usando a
+		            propriedade $g(x)\delta(x-a) = g(a)\delta(x-a)$. Interprete
+		            fisicamente o aparecimento do termo em $\delta'(x)$ na
+		            segunda derivada.
+		      \item Considere a lorentziana
+		            $$
+			            L_\eta(x) = \frac{1}{\pi}\,\frac{\eta}{x^2+\eta^2}.
+		            $$
+		            Mostre que $L_\eta(x)$ é normalizada para qualquer $\eta>0$
+		            e que
+		            $$
+			            \lim_{\eta\to0}\int_{-\infty}^{\infty} L_\eta(x)\, f(x)\,\dd x = f(0).
+		            $$
+	      \end{enumerate}
+
+	\item Considere o operador $\dfrac{\dd^2}{\dd x^2}-k^2$ ($k>0$) atuando
+	      sobre funções definidas em toda a reta real.
+	      \begin{enumerate}
+		      \item Verifique, por substituição direta, que
+		            $$
+			            G(x,x_0) = -\frac{1}{2k}\, e^{-k|x-x_0|}
+		            $$
+		            satisfaz $\left(\dfrac{\dd^2}{\dd x^2}-k^2\right)G(x,x_0) = \delta(x-x_0)$.
+		      \item Mostre que $G(x,x_0)$ não é única: somando uma solução
+		            homogênea $c_1 e^{kx}+c_2 e^{-kx}$ à solução, a equação
+		            continua satisfeita. Explique por que, ao contrário do caso
+		            $k=0$, exigir que $G$ seja limitada quando $x\to\pm\infty$
+		            já basta para fixar $c_1=c_2=0$.
+	      \end{enumerate}
+
+	\item Considere a equação de Bessel de ordem $3$:
+	      $$
+		      x^2y'' + xy' + (x^2-9)y = 0.
+	      $$
+	      \begin{enumerate}
+		      \item Classifique o ponto $x_0=0$, determine o polinômio
+		            indicial e suas raízes.
+		      \item Encontre a solução correspondente ao maior índice da
+		            equação indicial usando o método de Frobenius (relação de
+		            recorrência).
+		      \item Classifique o tipo da solução linearmente independente
+		            (Caso 1, Caso 2-A, Caso 2-B-i ou Caso 2-B-ii) e discuta o
+		            aparecimento de termos logarítmicos.
+	      \end{enumerate}
+
+	\item Considere a equação diferencial
+	      $$
+		      xy'' + (3-x)y' + \lambda y = 0.
+	      $$
+	      \begin{enumerate}
+		      \item Resolva a equação em torno de $x_0=0$ por séries de
+		            potências e obtenha a relação de recorrência.
+		      \item Determine para quais valores de $\lambda$ a solução se
+		            reduz a um polinômio.
+	      \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
