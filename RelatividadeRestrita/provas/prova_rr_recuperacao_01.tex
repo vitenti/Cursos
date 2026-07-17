@@ -1,0 +1,102 @@
+\newif\ifuseseminar
+\useseminartrue
+\input{../../latex_common/header.tex.frag}
+
+\title{Relatividade Restrita -- Prova de Recuperação}
+
+\begin{document}
+\begin{center}
+    \textbf{\Large Prova de Recuperação -- Relatividade Restrita}
+\end{center}
+
+Em toda a prova abaixo usaremos assinatura $(-,+,+,+)$ e, quando aplicável,
+coordenadas em anos-luz.
+
+\begin{enumerate}
+
+    \item (3 pontos) Separação invariante e relatividade da simultaneidade:
+          Considere dois eventos $A$ e $B$. No referencial inercial $S$, temos:
+          $$
+              x_A^\mu = (x^0_A, x^1_A) = (2, 6), \quad
+              x_B^\mu = (x^0_B, x^1_B) = (-1, 1).
+          $$
+          \begin{enumerate}
+              \item Calcule a separação invariante $\Delta s^2$ usando a
+                    métrica de Minkowski $\eta_{\mu\nu} = \mathrm{diag}(-1,1)$,
+                    classifique a separação (tipo tempo, tipo espaço ou nula)
+                    e determine qual evento ocorre primeiro em $S$.
+
+              \item Determine a velocidade $v$ de um referencial $S'$ no qual
+                    $A$ e $B$ são simultâneos. Mostre explicitamente, por meio
+                    da transformação de Lorentz, que os tempos de $A$ e $B$
+                    coincidem em $S'$.
+
+              \item É possível encontrar um referencial em que a \emph{ordem
+                          temporal} dos dois eventos seja invertida? E a \emph{ordem
+                          espacial}? Justifique as duas respostas a partir do valor
+                    de $\Delta s^2$ e interprete fisicamente.
+          \end{enumerate}
+
+    \item (2 pontos) Transformações de Lorentz e invariância da métrica: Seja
+          $S'$ um referencial em movimento com velocidade $v$ ao longo do eixo
+          $x^1$.
+          \begin{enumerate}
+              \item Escreva a transformação de Lorentz na forma tensorial
+                    $x'^\mu = \Lambda^\mu{}_\nu\, x^\nu$, exibindo
+                    explicitamente $\Lambda^\mu{}_\nu$ em termos de $\gamma$ e
+                    $\beta = v/c$, e mostre que
+                    $\Lambda^\rho{}_\mu\, \Lambda^\sigma{}_\nu\, \eta_{\rho\sigma}
+                        = \eta_{\mu\nu}$.
+
+              \item A partir desse resultado, mostre que tanto o intervalo
+                    $\Delta s^2 = \eta_{\mu\nu}\,\Delta x^\mu \Delta x^\nu$
+                    quanto o tempo próprio
+                    $\Delta\tau = \int \sqrt{-\eta_{\mu\nu}\,\dot{x}^\mu\dot{x}^\nu}\,dt$
+                    são invariantes sob transformações de Lorentz.
+          \end{enumerate}
+
+    \item (3 pontos) Considere a quadrivelocidade
+          $u^\mu = \frac{1}{c}\frac{dx^\mu}{d\tau}$, onde $x^\mu = (ct, \mathbf r)$.
+          \begin{enumerate}
+              \item Mostre que
+                    $$
+                        u^\mu=(\gamma,\gamma\beta_x,\gamma\beta_y,\gamma\beta_z),
+                    $$
+                    onde $\beta_i=v_i/c$ e $\gamma=1/\sqrt{1-\beta^2}$, com
+                    $\beta^2 = \beta_x^2+\beta_y^2+\beta_z^2$.
+
+              \item Demonstre a condição de normalização $u^\mu u_\mu=-1$ a
+                    partir da relação $d\tau = dt/\gamma$ e da métrica
+                    $(-,+,+,+)$.
+
+              \item Uma partícula move-se com velocidade tridimensional
+                    $$
+                        \mathbf v=(0.36c,\;0.48c,\;0).
+                    $$
+                    Calcule explicitamente as quatro componentes
+                    contravariantes de $u^\mu$ e verifique numericamente que
+                    $u^\mu u_\mu = -1$.
+          \end{enumerate}
+
+    \item (2 pontos) Considere o quadrimomento $p^\mu = mc\,u^\mu$ de uma
+          partícula relativística de massa $m$, com $u^\mu$ definido na
+          questão anterior.
+          \begin{enumerate}
+              \item A partir de $u^\mu = \gamma(1, \boldsymbol\beta)$, mostre que
+                    $p^\mu = \left( \frac{E}{c}, \mathbf p \right)$,
+                    identificando explicitamente $E = \gamma m c^2$,
+                    $\mathbf p = \gamma m \mathbf v$, e interprete fisicamente
+                    o limite não relativístico ($v \ll c$).
+
+              \item Usando o invariante de Lorentz $p^\mu p_\mu = -m^2 c^2$,
+                    deduza a relação de dispersão relativística
+                    $E^2 = p^2 c^2 + m^2 c^4$. Um próton (massa $m_p$) possui
+                    energia total $E = \tfrac{5}{3} m_p c^2$. Determine sua
+                    velocidade $v/c$, o fator de Lorentz $\gamma$ e o momento
+                    linear $p$ em unidades de $m_p c$, verificando a relação
+                    de dispersão para esses valores.
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
